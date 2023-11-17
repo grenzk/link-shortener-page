@@ -1,0 +1,54 @@
+:root {
+  --font-family-sans: 'Poppins', sans-serif;
+
+  --line-height-headers: 1.1;
+  --line-height-body: 1.5;
+
+  --color-primary-cyan: hsl(180, 66%, 49%);
+  --color-primary-dark-violet: hsl(257, 27%, 26%);
+
+  --color-secondary-red: hsl(0, 87%, 67%);
+
+  --color-neutral-gray: hsl(0, 0%, 75%);
+  --color-neutral-grayish-violet: hsl(257, 7%, 63%);
+  --color-neutral-very-dark-blue: hsl(255, 11%, 22%);
+  --color-neutral-very-dark-violet: hsl(260, 8%, 14%);
+
+  --color-text-header: var(--color-neutral-very-dark-blue);
+  --color-text-body: var(--color-neutral-grayish-violet);
+  --color-text-muted: var(--color-neutral-gray);
+
+  --font-size-xs: 0.75rem;
+  --font-size-s: 0.9375rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-xxl: 1.375rem;
+  --font-size-xxxl: 1.75rem;
+  --font-size-xxxxl: 2.625rem;
+
+  --font-size-nav: var(--font-size-l);
+  --font-size-shorten-button: var(--font-size-l);
+  --font-size-copy-button: var(--font-size-m);
+  --font-size-main-secondary-text: var(--font-size-l);
+  --font-size-other-secondary-text: var(--font-size-m);
+  --font-size-footer-label: var(--font-size-m);
+
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+}
+
+@media (min-width: 50rem) {
+  :root {
+    --font-size-xs: 1rem;
+    --font-size-m: var(--font-size-xl);
+    --font-size-xxxl: 2.5rem;
+    --font-size-xxxxl: 5rem;
+
+    --font-size-nav: var(--font-size-s);
+    --font-size-shorten-button: var(--font-size-xl);
+    --font-size-copy-button: var(--font-size-s);
+    --font-size-main-secondary-text: var(--font-size-xxl);
+    --font-size-other-secondary-text: var(--font-size-l);
+  }
+}
