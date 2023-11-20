@@ -1,5 +1,6 @@
 <script setup>
 import BrandLogo from '@/components/images/BrandLogo.vue'
+import HeroImage from '@/components/images/HeroImage.vue'
 </script>
 
 <template>
@@ -22,7 +23,20 @@ import BrandLogo from '@/components/images/BrandLogo.vue'
     </div>
   </header>
   <main>
-    <h1>Hello, Vue!</h1>
+    <section class="hero">
+      <div class="hero-group container">
+        <HeroImage class="image" />
+
+        <div class="left-panel">
+          <h1 class="title">More than just shorter links</h1>
+          <p class="secondary-text">
+            Build your brand’s recognition and get detailed insights on how your links are
+            performing.
+          </p>
+          <a href="#">Get Started</a>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
