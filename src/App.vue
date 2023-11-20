@@ -36,6 +36,11 @@ import HeroImage from '@/components/images/HeroImage.vue'
           <a href="#">Get Started</a>
         </div>
       </div>
+      
+      <form class="form container">
+        <input type="text" id="link" name="link" placeholder="Shorten a link here..." />
+        <input type="submit" value="Submit" />
+      </form>
     </section>
   </main>
 </template>
