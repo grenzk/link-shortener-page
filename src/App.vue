@@ -1,6 +1,9 @@
 <script setup>
 import BrandLogo from '@/components/images/BrandLogo.vue'
 import HeroImage from '@/components/images/HeroImage.vue'
+import IconBrandRecognition from '@/components/icons/IconBrandRecognition.vue'
+import IconDetailedRecords from '@/components/icons/IconDetailedRecords.vue'
+import IconFullyCustomizable from './components/icons/IconFullyCustomizable.vue'
 </script>
 
 <template>
@@ -36,11 +39,56 @@ import HeroImage from '@/components/images/HeroImage.vue'
           <a href="#">Get Started</a>
         </div>
       </div>
-      
+
       <form class="form container">
         <input type="text" id="link" name="link" placeholder="Shorten a link here..." />
         <input type="submit" value="Submit" />
       </form>
+    </section>
+
+    <section class="advanced-statistics container">
+      <div class="advanced-statistics-group">
+        <div class="top-panel">
+          <h2 class="section-title">Advanced Statistics</h2>
+          <p class="other secondary-text">
+            Track how your links are performing across the web with our advanced statistics
+            dashboard.
+          </p>
+        </div>
+
+        <div class="bottom-panel">
+          <div class="card">
+            <div class="icon"><IconBrandRecognition /></div>
+            <h3 class="title">Brand Recognition</h3>
+            <p class="description">
+              Boost your brand recognition with each click. Generic links don’t mean a thing.
+              Branded links help instil confidence in your content.
+            </p>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="card">
+            <div class="icon"><IconDetailedRecords /></div>
+            <h3 class="title">Detailed Records</h3>
+            <p class="description">
+              Gain insights into who is clicking your links. Knowing when and where people engage
+              with your content helps inform better decisions.
+            </p>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="card">
+            <div class="icon"><IconFullyCustomizable /></div>
+            <h3 class="title">Fully Customizable</h3>
+            <p class="description">
+              Improve brand awareness and content discoverability through customizable links,
+              supercharging audience engagement.
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 </template>
