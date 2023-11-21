@@ -3,7 +3,11 @@ import BrandLogo from '@/components/images/BrandLogo.vue'
 import HeroImage from '@/components/images/HeroImage.vue'
 import IconBrandRecognition from '@/components/icons/IconBrandRecognition.vue'
 import IconDetailedRecords from '@/components/icons/IconDetailedRecords.vue'
-import IconFullyCustomizable from './components/icons/IconFullyCustomizable.vue'
+import IconFullyCustomizable from '@/components/icons/IconFullyCustomizable.vue'
+import IconFacebook from '@/components/icons/IconFacebook.vue'
+import IconTwitter from '@/components/icons/IconTwitter.vue'
+import IconPinterest from '@/components/icons/IconPinterest.vue'
+import IconInstagram from '@/components/icons/IconInstagram.vue'
 </script>
 
 <template>
@@ -96,6 +100,63 @@ import IconFullyCustomizable from './components/icons/IconFullyCustomizable.vue'
       <a href="#">Get Started</a>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer-group container">
+      <BrandLogo />
+
+      <div class="content">
+        <h3>Features</h3>
+        <nav class="footer-nav">
+          <ul aria-label="Footer">
+            <li><a href="#">Link Shortening</a></li>
+            <li><a href="#">Branded Links</a></li>
+            <li><a href="#">Analytics</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="content">
+        <h3>Resources</h3>
+        <nav class="footer-nav">
+          <ul aria-label="Footer">
+            <li><a href="#"></a>Blog</li>
+            <li><a href="#"></a>Developers</li>
+            <li><a href="#"></a>Support</li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="content">
+        <h3>Company</h3>
+        <nav class="footer-nav">
+          <ul aria-label="Footer">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="content">
+        <ul aria-label="Social links" class="socials">
+          <li>
+            <a aria-label="facebook" href="#"><IconFacebook /></a>
+          </li>
+          <li>
+            <a aria-label="twitter" href="#"><IconTwitter /></a>
+          </li>
+          <li>
+            <a aria-label="pinterest" href="#"><IconPinterest /></a>
+          </li>
+          <li>
+            <a aria-label="instagram" href="#"><IconInstagram /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <style scoped></style>
