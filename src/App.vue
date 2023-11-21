@@ -90,6 +90,11 @@ import IconFullyCustomizable from './components/icons/IconFullyCustomizable.vue'
         </div>
       </div>
     </section>
+
+    <section class="call-to-action">
+      <h2 class="section-title">Boost your links today</h2>
+      <a href="#">Get Started</a>
+    </section>
   </main>
 </template>
 
