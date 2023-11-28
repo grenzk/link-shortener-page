@@ -1,6 +1,7 @@
 <script setup>
 import BrandLogo from '@/components/images/BrandLogo.vue'
 import HeroImage from '@/components/images/HeroImage.vue'
+import IconHamburger from '@/components/icons/IconHamburger.vue'
 import IconBrandRecognition from '@/components/icons/IconBrandRecognition.vue'
 import IconDetailedRecords from '@/components/icons/IconDetailedRecords.vue'
 import IconFullyCustomizable from '@/components/icons/IconFullyCustomizable.vue'
@@ -12,21 +13,27 @@ import IconInstagram from '@/components/icons/IconInstagram.vue'
 
 <template>
   <header class="header">
-    <div class="l-container">
+    <div class="header-group | l-container">
       <a href="#"><BrandLogo /></a>
 
-      <nav class="nav">
-        <ul>
-          <a href="#"><li>Feaures</li></a>
-          <a href="#"><li>Pricing</li></a>
-          <a href="#"><li>Resources</li></a>
+      <nav class="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-link"><a href="#">Feaures</a></li>
+          <li class="nav-link"><a href="#">Pricing</a></li>
+          <li class="nav-link"><a href="#">Resources</a></li>
+        </ul>
+
+        <div class="nav-divider"></div>
+
+        <ul class="nav-list">
+          <li class="nav-link"><a href="#">Login</a></li>
+          <li class="nav-link"><a href="#">Sign Up</a></li>
         </ul>
       </nav>
 
-      <nav class="nav">
-        <a href="#">Login</a>
-        <a href="#">Sign Up</a>
-      </nav>
+      <button class="nav-toggle">
+        <IconHamburger />
+      </button>
     </div>
   </header>
   <main>
