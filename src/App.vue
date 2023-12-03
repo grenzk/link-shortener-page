@@ -13,21 +13,21 @@ import IconInstagram from '@/components/icons/IconInstagram.vue'
 
 <template>
   <header class="header">
-    <div class="header-group | l-container">
+    <div class="header-group l-container">
       <a href="#"><BrandLogo /></a>
 
-      <nav class="nav-menu">
-        <ul class="nav-list">
-          <li class="nav-link"><a href="#">Feaures</a></li>
-          <li class="nav-link"><a href="#">Pricing</a></li>
-          <li class="nav-link"><a href="#">Resources</a></li>
+      <nav class="nav">
+        <ul class="nav-list l-row-gap-1">
+          <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
         </ul>
 
         <div class="nav-divider"></div>
 
-        <ul class="nav-list">
-          <li class="nav-link"><a href="#">Login</a></li>
-          <li class="nav-link"><a href="#">Sign Up</a></li>
+        <ul class="nav-list l-row-gap-2">
+          <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+          <li class="nav-item"><a href="#" class="nav-link styled-link">Sign Up</a></li>
         </ul>
       </nav>
 
@@ -166,4 +166,64 @@ import IconInstagram from '@/components/icons/IconInstagram.vue'
   </footer>
 </template>
 
-<style scoped></style>
+<style lang="scss">
+// Header
+.header {
+  background-color: var(--color-neutral-white);
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+
+  &-group {
+    position: relative;
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.nav {
+  @media screen and (max-width: 1023px) {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: var(--color-primary-dark-violet);
+    border-radius: 0.625rem;
+    padding: 2.5rem 1.5rem;
+  }
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-item {
+    text-align: center;
+  }
+
+  &-link {
+    color: var(--color-neutral-white);
+    font-size: var(--font-size-l);
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+  }
+
+  &-divider {
+    border: 0.5px solid var(--color-neutral-grayish-violet);
+    opacity: 0.25;
+    margin-top: 1.88rem;
+    margin-bottom: 2rem;
+  }
+
+  &-toggle {
+    display: inline-flex;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+</style>
