@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from 'vue'
+
 import BrandLogo from '@/components/images/BrandLogo.vue'
 import HeroImage from '@/components/images/HeroImage.vue'
 import IconHamburger from '@/components/icons/IconHamburger.vue'
@@ -9,6 +11,12 @@ import IconFacebook from '@/components/icons/IconFacebook.vue'
 import IconTwitter from '@/components/icons/IconTwitter.vue'
 import IconPinterest from '@/components/icons/IconPinterest.vue'
 import IconInstagram from '@/components/icons/IconInstagram.vue'
+
+const isShown = ref(false)
+
+const toggleNav = () => {
+  isShown.value = !isShown.value
+}
 </script>
 
 <template>
@@ -16,22 +24,24 @@ import IconInstagram from '@/components/icons/IconInstagram.vue'
     <div class="header-group l-container">
       <a href="#"><BrandLogo /></a>
 
-      <nav class="nav">
-        <ul class="nav-list l-row-gap-1">
-          <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
-        </ul>
+      <Transition name="fade">
+        <nav class="nav" v-if="isShown">
+          <ul class="nav-list l-row-gap-1">
+            <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
+          </ul>
 
-        <div class="nav-divider"></div>
+          <div class="nav-divider"></div>
 
-        <ul class="nav-list l-row-gap-2">
-          <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
-          <li class="nav-item"><a href="#" class="nav-link styled-link">Sign Up</a></li>
-        </ul>
-      </nav>
+          <ul class="nav-list l-row-gap-2">
+            <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="#" class="nav-link styled-link">Sign Up</a></li>
+          </ul>
+        </nav>
+      </Transition>
 
-      <button class="nav-toggle">
+      <button class="nav-toggle" @click="toggleNav">
         <IconHamburger />
       </button>
     </div>
@@ -225,5 +235,15 @@ import IconInstagram from '@/components/icons/IconInstagram.vue'
     border: none;
     cursor: pointer;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
