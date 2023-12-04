@@ -220,6 +220,10 @@ const toggleNav = () => {
     font-size: var(--font-size-l);
     font-weight: var(--font-weight-bold);
     cursor: pointer;
+
+    &:hover {
+      color: var(--color-neutral-very-dark-blue);
+    }
   }
 
   &-divider {
