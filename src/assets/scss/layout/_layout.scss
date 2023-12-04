@@ -1,11 +1,12 @@
 .l-container {
+  max-width: 968px;
   margin: 0 var(--space-l);
 }
 
-.l-row-gap-1 {
-  row-gap: 1.88rem;
+.l-gap-1 {
+  gap: 1.88rem;
 }
 
-.l-row-gap-2 {
-  row-gap: 1.5rem;
+.l-gap-2 {
+  gap: 1.5rem;
 }

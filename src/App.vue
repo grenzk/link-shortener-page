@@ -26,7 +26,7 @@ const toggleNav = () => {
 
       <Transition name="fade">
         <nav class="nav" v-if="isShown">
-          <ul class="nav-list l-row-gap-1">
+          <ul class="nav-list l-gap-1">
             <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
@@ -34,7 +34,7 @@ const toggleNav = () => {
 
           <div class="nav-divider"></div>
 
-          <ul class="nav-list l-row-gap-2">
+          <ul class="nav-list l-gap-2">
             <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
             <li class="nav-item"><a href="#" class="nav-link styled-link">Sign Up</a></li>
           </ul>
