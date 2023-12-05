@@ -44,7 +44,7 @@
   --z-fixed: 100;
 }
 
-@media (min-width: 50rem) {
+@media screen and (min-width: 768px) {
   :root {
     --font-size-xs: 1rem;
     --font-size-m: var(--font-size-xl);
