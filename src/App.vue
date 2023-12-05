@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watchEffect, onMounted } from 'vue'
 
 import BrandLogo from '@/components/images/BrandLogo.vue'
 import HeroImage from '@/components/images/HeroImage.vue'
@@ -13,10 +13,24 @@ import IconPinterest from '@/components/icons/IconPinterest.vue'
 import IconInstagram from '@/components/icons/IconInstagram.vue'
 
 const isShown = ref(false)
+const isDesktop = ref(false)
 
 const toggleNav = () => {
   isShown.value = !isShown.value
 }
+
+const checkIfDesktop = () => {
+  isDesktop.value = window.innerWidth >= 768
+}
+
+watchEffect(() => {
+  isDesktop.value ? (isShown.value = true) : (isShown.value = false)
+})
+
+onMounted(() => {
+  checkIfDesktop()
+  window.addEventListener('resize', checkIfDesktop)
+})
 </script>
 
 <template>
@@ -25,7 +39,7 @@ const toggleNav = () => {
       <a href="#"><BrandLogo /></a>
 
       <Transition name="fade">
-        <nav class="nav" v-if="isShown">
+        <nav class="nav" v-if="isShown || isDesktop">
           <ul class="nav-list l-gap-1">
             <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
@@ -195,7 +209,7 @@ const toggleNav = () => {
 }
 
 .nav {
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 767px) {
     position: absolute;
     top: 6rem;
     left: 0;
