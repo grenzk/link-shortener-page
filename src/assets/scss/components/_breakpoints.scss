@@ -1,0 +1,42 @@
+@media screen and (min-width: 768px) {
+  .l-gap-1,
+  .l-gap-2 {
+    gap: 2rem;
+  }
+
+  .header-group {
+    justify-content: flex-start;
+    gap: 2.84rem;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    &-list {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-list.l-gap-2 {
+      margin-left: auto;
+    }
+
+    &-link {
+      color: unset;
+    }
+
+    &-toggle,
+    &-divider {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .l-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
