@@ -190,7 +190,6 @@ onMounted(() => {
 // Header
 .header {
   background-color: var(--color-neutral-white);
-  width: 100%;
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
@@ -210,7 +209,6 @@ onMounted(() => {
     top: 6rem;
     left: 0;
     right: 0;
-    margin: 0 auto;
     background-color: var(--color-primary-dark-violet);
     border-radius: 0.625rem;
     padding: 2.5rem 1.5rem;
