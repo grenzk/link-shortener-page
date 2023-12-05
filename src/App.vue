@@ -1,5 +1,5 @@
 <script setup>
-import { ref, watchEffect, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 
 import BrandLogo from '@/components/images/BrandLogo.vue'
 import HeroImage from '@/components/images/HeroImage.vue'
@@ -22,10 +22,6 @@ const toggleNav = () => {
 const checkIfDesktop = () => {
   isDesktop.value = window.innerWidth >= 768
 }
-
-watchEffect(() => {
-  isDesktop.value ? (isShown.value = true) : (isShown.value = false)
-})
 
 onMounted(() => {
   checkIfDesktop()
