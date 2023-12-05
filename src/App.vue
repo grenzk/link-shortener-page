@@ -227,7 +227,7 @@ onMounted(() => {
 
   &-link {
     color: var(--color-neutral-white);
-    font-size: var(--font-size-l);
+    font-size: var(--font-size-nav);
     font-weight: var(--font-weight-bold);
     cursor: pointer;
 
