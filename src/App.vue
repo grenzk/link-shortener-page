@@ -89,7 +89,7 @@ import {
 
   <footer class="footer">
     <div class="footer-group l-container">
-      <BrandLogo />
+      <!-- <BrandLogo /> -->
 
       <div class="footer-content">
         <h3>Features</h3>
