@@ -1,16 +1,18 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-import BrandLogo from '@/components/images/BrandLogo.vue'
-import HeroImage from '@/components/images/HeroImage.vue'
-import IconHamburger from '@/components/icons/IconHamburger.vue'
-import IconBrandRecognition from '@/components/icons/IconBrandRecognition.vue'
-import IconDetailedRecords from '@/components/icons/IconDetailedRecords.vue'
-import IconFullyCustomizable from '@/components/icons/IconFullyCustomizable.vue'
-import IconFacebook from '@/components/icons/IconFacebook.vue'
-import IconTwitter from '@/components/icons/IconTwitter.vue'
-import IconPinterest from '@/components/icons/IconPinterest.vue'
-import IconInstagram from '@/components/icons/IconInstagram.vue'
+import { BrandLogo, HeroImage } from '@/components/images'
+
+import {
+  IconHamburger,
+  IconBrandRecognition,
+  IconDetailedRecords,
+  IconFullyCustomizable,
+  IconFacebook,
+  IconTwitter,
+  IconPinterest,
+  IconInstagram
+} from '@/components/icons'
 
 const isShown = ref(false)
 const isDesktop = ref(false)
@@ -259,3 +261,4 @@ onMounted(() => {
   opacity: 0;
 }
 </style>
+@/components/images @/components/images

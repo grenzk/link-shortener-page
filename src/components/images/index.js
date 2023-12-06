@@ -1,0 +1,6 @@
+export { default as BoostDesktop } from './BoostDesktop.vue'
+export { default as BoostMobile } from './BoostMobile.vue'
+export { default as BrandLogo } from './BrandLogo.vue'
+export { default as HeroImage } from './HeroImage.vue'
+export { default as ShortenDesktop } from './ShortenDesktop.vue'
+export { default as ShortenMobile } from './ShortenMobile.vue'
