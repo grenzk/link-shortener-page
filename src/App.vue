@@ -1,34 +1,20 @@
 <script setup>
-import BrandLogo from '@/components/images/BrandLogo.vue'
-import HeroImage from '@/components/images/HeroImage.vue'
-import IconBrandRecognition from '@/components/icons/IconBrandRecognition.vue'
-import IconDetailedRecords from '@/components/icons/IconDetailedRecords.vue'
-import IconFullyCustomizable from '@/components/icons/IconFullyCustomizable.vue'
-import IconFacebook from '@/components/icons/IconFacebook.vue'
-import IconTwitter from '@/components/icons/IconTwitter.vue'
-import IconPinterest from '@/components/icons/IconPinterest.vue'
-import IconInstagram from '@/components/icons/IconInstagram.vue'
+import { SiteHeader } from '@/components'
+import { HeroImage } from '@/components/images'
+
+import {
+  IconBrandRecognition,
+  IconDetailedRecords,
+  IconFullyCustomizable,
+  IconFacebook,
+  IconTwitter,
+  IconPinterest,
+  IconInstagram
+} from '@/components/icons'
 </script>
 
 <template>
-  <header class="header">
-    <div class="l-container">
-      <a href="#"><BrandLogo /></a>
-
-      <nav class="nav">
-        <ul>
-          <a href="#"><li>Feaures</li></a>
-          <a href="#"><li>Pricing</li></a>
-          <a href="#"><li>Resources</li></a>
-        </ul>
-      </nav>
-
-      <nav class="nav">
-        <a href="#">Login</a>
-        <a href="#">Sign Up</a>
-      </nav>
-    </div>
-  </header>
+  <SiteHeader />
   <main>
     <section class="hero">
       <div class="hero-group l-container">
@@ -103,7 +89,7 @@ import IconInstagram from '@/components/icons/IconInstagram.vue'
 
   <footer class="footer">
     <div class="footer-group l-container">
-      <BrandLogo />
+      <!-- <BrandLogo /> -->
 
       <div class="footer-content">
         <h3>Features</h3>
@@ -159,4 +145,4 @@ import IconInstagram from '@/components/icons/IconInstagram.vue'
   </footer>
 </template>
 
-<style scoped></style>
+<style lang="scss"></style>

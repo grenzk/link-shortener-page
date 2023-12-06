@@ -10,9 +10,13 @@
   font: inherit;
 }
 
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 html:focus-within {
@@ -26,18 +30,14 @@ body {
 
 body {
   font-family: var(--font-family-sans);
+  color: var(--color-neutral-grayish-violet);
   font-size: var(--font-size-s);
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
 
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-}
-
 img,
-picture,
-svg {
+picture {
   max-width: 100%;
   display: block;
 }

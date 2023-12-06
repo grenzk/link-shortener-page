@@ -1,0 +1,8 @@
+export { default as IconBrandRecognition } from './IconBrandRecognition.vue'
+export { default as IconDetailedRecords } from './IconDetailedRecords.vue'
+export { default as IconFacebook } from './IconFacebook.vue'
+export { default as IconFullyCustomizable } from './IconFullyCustomizable.vue'
+export { default as IconHamburger } from './IconHamburger.vue'
+export { default as IconInstagram } from './IconInstagram.vue'
+export { default as IconPinterest } from './IconPinterest.vue'
+export { default as IconTwitter } from './IconTwitter.vue'

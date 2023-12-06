@@ -1,14 +1,14 @@
 :root {
   --font-family-sans: 'Poppins', sans-serif;
 
-  --line-height-headers: 1.1;
-  --line-height-body: 1.5;
+  --header-height: 7rem;
 
   --color-primary-cyan: hsl(180, 66%, 49%);
   --color-primary-dark-violet: hsl(257, 27%, 26%);
 
   --color-secondary-red: hsl(0, 87%, 67%);
 
+  --color-neutral-white: hsl(0, 0%, 100%);
   --color-neutral-gray: hsl(0, 0%, 75%);
   --color-neutral-grayish-violet: hsl(257, 7%, 63%);
   --color-neutral-very-dark-blue: hsl(255, 11%, 22%);
@@ -36,9 +36,15 @@
 
   --font-weight-medium: 500;
   --font-weight-bold: 700;
+
+  --space-l: 1.5rem;
+
+  --border-radius-l: 1.75rem;
+
+  --z-fixed: 100;
 }
 
-@media (min-width: 50rem) {
+@media screen and (min-width: 768px) {
   :root {
     --font-size-xs: 1rem;
     --font-size-m: var(--font-size-xl);
