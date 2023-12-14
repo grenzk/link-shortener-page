@@ -16,24 +16,24 @@ import {
 <template>
   <SiteHeader />
   <main>
-    <section class="hero">
-      <div class="hero-group l-container">
-        <HeroImage class="image" />
+    <section class="hero l-section overflow-hidden">
+      <div class="hero-group l-container l-flex">
+        <HeroImage class="hero-img svg-img" />
 
-        <div class="hero-left-panel">
+        <div class="hero-left-panel l-flex">
           <h1 class="hero-title">More than just shorter links</h1>
-          <p class="main-secondary-text">
+          <p class="hero-secondary-text">
             Build your brand’s recognition and get detailed insights on how your links are
             performing.
           </p>
-          <a href="#">Get Started</a>
+          <a href="#" class="hero-link styled-link link-padding-l">Get Started</a>
         </div>
       </div>
 
-      <form class="form l-container">
+      <!-- <form class="form l-container">
         <input type="text" id="link" name="link" placeholder="Shorten a link here..." />
         <input type="submit" value="Submit" />
-      </form>
+      </form> -->
     </section>
 
     <section class="advanced-statistics l-container">
@@ -145,4 +145,40 @@ import {
   </footer>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+// Hero
+.hero {
+  &-group {
+    flex-direction: column;
+    row-gap: 2.3rem;
+  }
+
+  &-img {
+    width: 500px;
+  }
+
+  &-left-panel {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &-title {
+    color: var(--color-neutral-very-dark-blue);
+    font-size: var(--font-size-xxxxl);
+    font-weight: var(--font-weight-bold);
+    line-height: 114.286%;
+    margin-bottom: 1rem;
+  }
+
+  &-secondary-text {
+    font-size: var(--font-size-hero-secondary-text);
+    line-height: 166.67%;
+    margin-bottom: 2rem;
+  }
+
+  &-link {
+    font-size: var(--font-size-xl);
+    align-self: center;
+  }
+}
+</style>
