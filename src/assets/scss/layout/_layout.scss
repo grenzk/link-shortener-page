@@ -3,6 +3,18 @@
   margin: 0 var(--space-l);
 }
 
+.l-section {
+  padding-bottom: 5.5rem;
+}
+
+.l-grid {
+  display: grid;
+}
+
+.l-flex {
+  display: flex;
+}
+
 .l-gap-1 {
   gap: 1.88rem;
 }
