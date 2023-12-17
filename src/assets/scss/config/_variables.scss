@@ -28,6 +28,7 @@
   --font-size-xxxxl: 2.625rem;
 
   --font-size-nav: var(--font-size-l);
+  --font-size-get-started-link: var(--font-size-xl);
   --font-size-shorten-button: var(--font-size-l);
   --font-size-copy-button: var(--font-size-m);
   --font-size-hero-secondary-text: var(--font-size-l);
@@ -49,12 +50,26 @@
     --font-size-xs: 1rem;
     --font-size-m: var(--font-size-xl);
     --font-size-xxxl: 2.5rem;
-    --font-size-xxxxl: 5rem;
 
     --font-size-nav: var(--font-size-s);
     --font-size-shorten-button: var(--font-size-xl);
     --font-size-copy-button: var(--font-size-s);
-    --font-size-hero-secondary-text: var(--font-size-xxl);
+    --font-size-hero-secondary-text: var(--font-size-s);
     --font-size-other-secondary-text: var(--font-size-l);
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  :root {
+    --font-size-xxxxl: 4.44rem;
+    --font-size-hero-secondary-text: 1.22rem;
+    --font-size-get-started-link: 1.11rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  :root {
+    --font-size-xxxxl: 5rem;
+    --font-size-hero-secondary-text: var(--font-size-xxl);
   }
 }

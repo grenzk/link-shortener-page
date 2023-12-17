@@ -177,7 +177,7 @@ import {
   }
 
   &-link {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-get-started-link);
     align-self: center;
   }
 }
