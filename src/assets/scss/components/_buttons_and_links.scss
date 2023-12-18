@@ -1,11 +1,11 @@
 .styled-link {
-  display: block;
   background: var(--color-primary-cyan);
+  font-weight: var(--font-weight-bold);
   border-radius: var(--border-radius-l);
   padding: 0.5rem 1.5rem;
   color: var(--color-neutral-white) !important;
 }
 
-
-
-
+.link-padding-l {
+  padding: 0.8rem 2.5rem;
+}

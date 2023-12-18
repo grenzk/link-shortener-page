@@ -38,7 +38,9 @@ onMounted(() => {
 
           <ul class="nav-list l-gap-2">
             <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
-            <li class="nav-item"><a href="#" class="nav-link styled-link">Sign Up</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link styled-link display-block">Sign Up</a>
+            </li>
           </ul>
         </nav>
       </Transition>
@@ -56,6 +58,7 @@ onMounted(() => {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
+  margin-bottom: -1rem;
 
   &-group {
     position: relative;

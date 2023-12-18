@@ -1,6 +1,18 @@
 .l-container {
-  max-width: 968px;
+  max-width: 1112px;
   margin: 0 var(--space-l);
+}
+
+.l-section {
+  padding-bottom: 10rem;
+}
+
+.l-grid {
+  display: grid;
+}
+
+.l-flex {
+  display: flex;
 }
 
 .l-gap-1 {
