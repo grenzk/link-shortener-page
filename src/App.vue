@@ -1,6 +1,8 @@
 <script setup>
+import InputText from 'primevue/inputtext'
+
 import { SiteHeader } from '@/components'
-import { HeroImage } from '@/components/images'
+import { HeroImage, ShortenMobile, ShortenDesktop } from '@/components/images'
 
 import {
   IconBrandRecognition,
@@ -29,15 +31,23 @@ import {
           <a href="#" class="hero-link styled-link link-padding-l">Get Started</a>
         </div>
       </div>
-
-      <!-- <form class="form l-container">
-        <input type="text" id="link" name="link" placeholder="Shorten a link here..." />
-        <input type="submit" value="Submit" />
-      </form> -->
     </section>
 
-    <section class="advanced-statistics l-container">
-      <div class="advanced-statistics-group">
+    <section class="advanced-statistics" style="background-color: #9e9aa8">
+      <form class="form l-container overflow-hidden">
+        <ShortenMobile class="form-bg-img-mobile" />
+        <ShortenDesktop class="form-bg-img-desktop" />
+
+        <InputText
+          type="text"
+          class="form-input-text"
+          v-model="value"
+          placeholder="Shorten a link here..."
+        />
+        <input class="form-submit-button" type="submit" value="Shorten It!" />
+      </form>
+
+      <div class="advanced-statistics-group l-container">
         <div class="advanced-statistics-top-panel">
           <h2 class="advanced-statistics-title">Advanced Statistics</h2>
           <p class="other-secondary-text">
@@ -179,6 +189,59 @@ import {
   &-link {
     font-size: var(--font-size-get-started-link);
     align-self: center;
+  }
+}
+
+.advanced-statistics {
+  position: relative;
+}
+
+// Form
+.form {
+  position: absolute;
+  background-color: var(--color-primary-dark-violet);
+  border-radius: var(--border-radius-s);
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  &-bg-img {
+    &-mobile,
+    &-desktop {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      right: 0;
+    }
+
+    &-desktop {
+      display: none;
+    }
+  }
+
+  &-input-text {
+    width: 100%;
+    height: 3rem;
+    font-size: var(--font-size-m);
+    border-radius: var(--border-radius-xs);
+    padding-left: 1rem;
+  }
+
+  &-submit-button {
+    width: 100%;
+    background-color: var(--color-primary-cyan);
+    color: var(--color-neutral-white);
+    font-size: var(--font-size-shorten-button);
+    font-weight: var(--font-weight-bold);
+    border: none;
+    border-radius: var(--border-radius-xs);
+    height: 3rem;
   }
 }
 </style>
