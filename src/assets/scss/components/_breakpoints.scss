@@ -72,6 +72,33 @@
       margin-right: -10rem;
     }
   }
+
+  .form {
+    flex-direction: row;
+    padding: 3.25rem 4rem;
+    gap: 1.5rem;
+
+    &-bg-img {
+      &-mobile {
+        display: none;
+      }
+
+      &-desktop {
+        display: block;
+      }
+    }
+
+    &-input-text {
+      height: 4rem;
+      padding-left: 2rem;
+    }
+
+    &-submit-button {
+      flex-basis: 11.75rem;
+      height: 4rem;
+      padding: 0 2.5rem;
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
