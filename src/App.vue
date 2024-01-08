@@ -56,7 +56,7 @@ import {
           </p>
         </div>
 
-        <div class="advanced-statistics-bottom-panel">
+        <div class="advanced-statistics-bottom-panel l-flex">
           <div class="advanced-statistics-card-divider"></div>
 
           <div class="advanced-statistics-card">
@@ -195,11 +195,6 @@ import {
   padding: 10rem 0 5rem;
   background-color: var(--color-neutral-light-gray);
 
-  &-top-panel {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
   &-title {
     color: var(--color-neutral-very-dark-blue);
     font-size: var(--font-size-xxxl);
@@ -216,13 +211,16 @@ import {
 
   &-bottom-panel {
     position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5.75rem;
   }
 
   &-card {
     position: relative;
     background-color: var(--color-neutral-white);
     padding: 4.81rem 2rem 2rem 2rem;
-    margin-bottom: 5.75rem;
     border-radius: var(--border-radius-xs);
     max-width: 21.875rem;
     height: 16.6875rem;
