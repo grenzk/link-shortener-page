@@ -9,6 +9,7 @@
   --color-secondary-red: hsl(0, 87%, 67%);
 
   --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-light-gray: hsl(225, 33%, 95%);
   --color-neutral-gray: hsl(0, 0%, 75%);
   --color-neutral-grayish-violet: hsl(257, 7%, 63%);
   --color-neutral-very-dark-blue: hsl(255, 11%, 22%);
@@ -32,7 +33,7 @@
   --font-size-shorten-button: var(--font-size-l);
   --font-size-copy-button: var(--font-size-m);
   --font-size-hero-secondary-text: var(--font-size-l);
-  --font-size-other-secondary-text: var(--font-size-m);
+  --font-size-advanced-statistics-secondary-text: var(--font-size-m);
   --font-size-footer-label: var(--font-size-m);
 
   --font-weight-medium: 500;
@@ -40,9 +41,10 @@
 
   --space-l: 1.5rem;
 
-  --border-radius-l: 1.75rem;
-  --border-radius-s: 0.625rem;
   --border-radius-xs: 0.3125rem;
+  --border-radius-s: 0.625rem;
+  --border-radius-l: 1.75rem;
+  --border-radius-xl: 50%;
 
   --z-fixed: 100;
 }
@@ -57,9 +59,7 @@
     --font-size-shorten-button: var(--font-size-xl);
     --font-size-copy-button: var(--font-size-s);
     --font-size-hero-secondary-text: var(--font-size-s);
-    --font-size-other-secondary-text: var(--font-size-l);
-
-    --border-radius-xs: var(--border-radius-s)
+    --font-size-advanced-statistics-secondary-text: var(--font-size-l);
   }
 }
 
