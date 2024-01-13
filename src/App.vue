@@ -48,7 +48,7 @@ import {
       </form>
 
       <div class="advanced-statistics-group l-container">
-        <div class="advanced-statistics-top-panel">
+        <div class="advanced-statistics-top-panel l-flex">
           <h2 class="advanced-statistics-title">Advanced Statistics</h2>
           <p class="advanced-statistics-secondary-text">
             Track how your links are performing across the web with our advanced statistics
@@ -195,18 +195,24 @@ import {
   padding: 10rem 0 5rem;
   background-color: var(--color-neutral-light-gray);
 
+  &-top-panel {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
   &-title {
     color: var(--color-neutral-very-dark-blue);
     font-size: var(--font-size-xxxl);
     font-weight: var(--font-weight-bold);
     text-align: center;
-    margin-bottom: 1rem;
   }
 
   &-secondary-text {
     font-size: var(--font-size-advanced-statistics-secondary-text);
     text-align: center;
     margin-bottom: 5.75rem;
+    max-width: 32rem;
   }
 
   &-bottom-panel {
