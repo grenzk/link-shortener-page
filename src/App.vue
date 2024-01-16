@@ -3,6 +3,7 @@ import InputText from 'primevue/inputtext'
 
 import { SiteHeader } from '@/components'
 import {
+  BrandLogo,
   HeroImage,
   ShortenMobile,
   ShortenDesktop,
@@ -106,7 +107,7 @@ import {
 
   <footer class="footer">
     <div class="footer-group l-container">
-      <!-- <BrandLogo /> -->
+      <a href="#"><BrandLogo /></a>
 
       <div class="footer-content">
         <h3>Features</h3>
