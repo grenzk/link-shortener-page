@@ -363,4 +363,9 @@ import {
     margin-bottom: 2rem;
   }
 }
+
+// Footer
+.footer {
+  background-color: var( --color-neutral-very-dark-violet);
+}
 </style>
