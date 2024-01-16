@@ -2,7 +2,13 @@
 import InputText from 'primevue/inputtext'
 
 import { SiteHeader } from '@/components'
-import { HeroImage, ShortenMobile, ShortenDesktop } from '@/components/images'
+import {
+  HeroImage,
+  ShortenMobile,
+  ShortenDesktop,
+  BoostMobile,
+  BoostDesktop
+} from '@/components/images'
 
 import {
   IconBrandRecognition,
@@ -89,9 +95,12 @@ import {
       </div>
     </section>
 
-    <section class="call-to-action">
+    <section class="call-to-action overflow-hidden">
+      <BoostMobile class="call-to-action-bg-img-mobile" />
+      <BoostDesktop class="call-to-action-bg-img-desktop" />
+
       <h2 class="call-to-action-title">Boost your links today</h2>
-      <a href="#">Get Started</a>
+      <a href="#" class="hero-link styled-link link-padding-l">Get Started</a>
     </section>
   </main>
 
@@ -321,6 +330,36 @@ import {
     border: none;
     border-radius: var(--border-radius-xs);
     height: 3rem;
+  }
+}
+
+// CTA
+.call-to-action {
+  position: relative;
+  background-color: var(--color-primary-dark-violet);
+  padding: 5.63rem 0;
+  text-align: center;
+  z-index: -1;
+
+  &-bg-img {
+    &-mobile,
+    &-desktop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -1;
+    }
+
+    &-desktop {
+      display: none;
+    }
+  }
+
+  &-title {
+    color: var(--color-neutral-white);
+    font-size: var(--font-size-xxxl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 2rem;
   }
 }
 </style>
