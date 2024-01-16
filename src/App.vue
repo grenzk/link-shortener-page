@@ -112,7 +112,7 @@ import {
       <div class="footer-content">
         <h3 class="footer-title">Features</h3>
         <nav class="footer-nav">
-          <ul aria-label="Footer">
+          <ul aria-label="Footer" class="footer-nav-list l-flex">
             <li class="footer-nav-item"><a href="#" class="footer-nav-link">Link Shortening</a></li>
             <li class="footer-nav-item"><a href="#" class="footer-nav-link">Branded Links</a></li>
             <li class="footer-nav-item"><a href="#" class="footer-nav-link">Analytics</a></li>
@@ -123,7 +123,7 @@ import {
       <div class="footer-content">
         <h3 class="footer-title">Resources</h3>
         <nav class="footer-nav">
-          <ul aria-label="Footer">
+          <ul aria-label="Footer" class="footer-nav-list l-flex">
             <li class="footer-nav-item"><a href="#" class="footer-nav-link">Blog</a></li>
             <li class="footer-nav-item"><a href="#" class="footer-nav-link">Developers</a></li>
             <li class="footer-nav-item"><a href="#" class="footer-nav-link">Support</a></li>
@@ -134,7 +134,7 @@ import {
       <div class="footer-content">
         <h3 class="footer-title">Company</h3>
         <nav class="footer-nav">
-          <ul aria-label="Footer">
+          <ul aria-label="Footer" class="footer-nav-list l-flex">
             <li class="footer-nav-item"><a href="#" class="footer-nav-link">About</a></li>
             <li class="footer-nav-item"><a href="#" class="footer-nav-link">Our Team</a></li>
             <li class="footer-nav-item"><a href="#" class="footer-nav-link">Careers</a></li>
@@ -397,13 +397,14 @@ import {
     margin-bottom: 1.38rem;
   }
 
+  &-nav-list {
+    flex-direction: column;
+    gap: 0.63rem;
+  }
+
   &-socials {
     align-items: center;
     gap: 1.5rem;
-  }
-
-  &-nav-item {
-    margin-bottom: 0.63rem;
   }
 
   &-nav-link {
