@@ -29,16 +29,16 @@ onMounted(() => {
       <Transition name="fade">
         <nav class="nav" v-if="isShown || isDesktop">
           <ul class="nav-list l-flex">
-            <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
+            <li class="nav-item text-center"><a href="#" class="nav-link">Features</a></li>
+            <li class="nav-item text-center"><a href="#" class="nav-link">Pricing</a></li>
+            <li class="nav-item text-center"><a href="#" class="nav-link">Resources</a></li>
           </ul>
 
           <div class="nav-divider"></div>
 
           <ul class="nav-list l-flex">
-            <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
-            <li class="nav-item">
+            <li class="nav-item text-center"><a href="#" class="nav-link">Login</a></li>
+            <li class="nav-item text-center">
               <a href="#" class="nav-link styled-link display-block">Sign Up</a>
             </li>
           </ul>
@@ -92,10 +92,6 @@ onMounted(() => {
     }
   }
 
-  &-item {
-    text-align: center;
-  }
-
   &-link {
     color: var(--color-neutral-white);
     font-size: var(--font-size-nav);
@@ -105,6 +101,10 @@ onMounted(() => {
     &:hover {
       color: var(--color-neutral-very-dark-blue);
     }
+  }
+
+  &-link.styled-link:hover {
+    background-color: var(--color-primary-cyan-light);
   }
 
   &-divider {
