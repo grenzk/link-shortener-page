@@ -57,7 +57,7 @@ onMounted(() => {
   background-color: var(--color-neutral-white);
   top: 0;
   left: 0;
-  z-index: var(--z-fixed);
+  z-index: 100;
   margin-bottom: -1rem;
 
   &-group {
