@@ -28,7 +28,7 @@ onMounted(() => {
 
       <Transition name="fade">
         <nav class="nav" v-if="isShown || isDesktop">
-          <ul class="nav-list l-gap-1">
+          <ul class="nav-list l-flex">
             <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
@@ -36,7 +36,7 @@ onMounted(() => {
 
           <div class="nav-divider"></div>
 
-          <ul class="nav-list l-gap-2">
+          <ul class="nav-list l-flex">
             <li class="nav-item"><a href="#" class="nav-link">Login</a></li>
             <li class="nav-item">
               <a href="#" class="nav-link styled-link display-block">Sign Up</a>
@@ -81,8 +81,15 @@ onMounted(() => {
   }
 
   &-list {
-    display: flex;
     flex-direction: column;
+
+    &:nth-child(1) {
+      gap: 1.88rem;
+    }
+
+    &:nth-child(3) {
+      gap: 1.5rem;
+    }
   }
 
   &-item {
