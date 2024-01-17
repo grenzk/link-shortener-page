@@ -25,11 +25,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .l-gap-1,
-  .l-gap-2 {
-    gap: 2rem;
-  }
-
   .header-group {
     justify-content: flex-start;
     gap: 2.84rem;
@@ -43,10 +38,15 @@
     &-list {
       flex-direction: row;
       align-items: center;
-    }
 
-    &-list.l-gap-2 {
-      margin-left: auto;
+      &:nth-child(1),
+      &:nth-child(3) {
+        gap: 2rem;
+      }
+
+      &:nth-child(3) {
+        margin-left: auto;
+      }
     }
 
     &-link {
