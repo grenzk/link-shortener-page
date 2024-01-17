@@ -3,6 +3,7 @@ import InputText from 'primevue/inputtext'
 
 import { SiteHeader } from '@/components'
 import {
+  BrandLogo,
   HeroImage,
   ShortenMobile,
   ShortenDesktop,
@@ -105,45 +106,45 @@ import {
   </main>
 
   <footer class="footer">
-    <div class="footer-group l-container">
-      <!-- <BrandLogo /> -->
+    <div class="footer-group l-container l-grid">
+      <a href="#"><BrandLogo class="footer-logo" /></a>
 
       <div class="footer-content">
-        <h3>Features</h3>
+        <h3 class="footer-title">Features</h3>
         <nav class="footer-nav">
-          <ul aria-label="Footer">
-            <li><a href="#">Link Shortening</a></li>
-            <li><a href="#">Branded Links</a></li>
-            <li><a href="#">Analytics</a></li>
+          <ul aria-label="Footer" class="footer-nav-list l-flex">
+            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Link Shortening</a></li>
+            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Branded Links</a></li>
+            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Analytics</a></li>
           </ul>
         </nav>
       </div>
 
       <div class="footer-content">
-        <h3>Resources</h3>
+        <h3 class="footer-title">Resources</h3>
         <nav class="footer-nav">
-          <ul aria-label="Footer">
-            <li><a href="#"></a>Blog</li>
-            <li><a href="#"></a>Developers</li>
-            <li><a href="#"></a>Support</li>
+          <ul aria-label="Footer" class="footer-nav-list l-flex">
+            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Blog</a></li>
+            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Developers</a></li>
+            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Support</a></li>
           </ul>
         </nav>
       </div>
 
       <div class="footer-content">
-        <h3>Company</h3>
+        <h3 class="footer-title">Company</h3>
         <nav class="footer-nav">
-          <ul aria-label="Footer">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact</a></li>
+          <ul aria-label="Footer" class="footer-nav-list l-flex">
+            <li class="footer-nav-item"><a href="#" class="footer-nav-link">About</a></li>
+            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Our Team</a></li>
+            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Careers</a></li>
+            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Contact</a></li>
           </ul>
         </nav>
       </div>
 
       <div class="footer-content">
-        <ul aria-label="Social links" class="socials">
+        <ul aria-label="Social links" class="footer-socials l-flex">
           <li>
             <a aria-label="facebook" href="#"><IconFacebook /></a>
           </li>
@@ -360,6 +361,54 @@ import {
     font-size: var(--font-size-xxxl);
     font-weight: var(--font-weight-bold);
     margin-bottom: 2rem;
+  }
+}
+
+// Footer
+.footer {
+  padding: 3.37rem 0 3.5rem 0;
+  background-color: var(--color-neutral-very-dark-violet);
+
+  &-group {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  &-content {
+    margin-bottom: 2.38rem;
+
+    &:nth-child(5) {
+      margin-bottom: unset;
+    }
+  }
+
+  &-logo {
+    path {
+      fill: var(--color-neutral-white);
+    }
+    margin-bottom: 3.08rem;
+  }
+
+  &-title {
+    color: var(--color-neutral-white);
+    font-size: var(--font-size-footer-label);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 1.38rem;
+  }
+
+  &-nav-list {
+    flex-direction: column;
+    gap: 0.63rem;
+  }
+
+  &-socials {
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &-nav-link {
+    color: var(--color-neutral-gray);
   }
 }
 </style>
