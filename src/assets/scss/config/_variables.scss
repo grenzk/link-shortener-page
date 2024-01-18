@@ -1,3 +1,7 @@
+@function px-to-rem($px, $font-base) {
+  @return calc($px / $font-base * 1rem);
+}
+
 :root {
   --font-family-sans: 'Poppins', sans-serif;
 
@@ -50,21 +54,21 @@
 
 @media screen and (min-width: 768px) {
   :root {
-    --font-base: 18;
+    $font-base: 18;
 
-    --font-size-xs: calc((16 / var(--font-base)) * 1rem);
-    --font-size-s: calc((15 / var(--font-base)) * 1rem);
-    --font-size-m: calc((20 / var(--font-base)) * 1rem);
-    --font-size-xxxl: calc((40 / var(--font-base)) * 1rem);
-    --font-size-xxxxl: calc((80 / var(--font-base)) * 1rem);
+    --font-size-xs: #{px-to-rem(16, $font-base)};
+    --font-size-s: #{px-to-rem(15, $font-base)};
+    --font-size-m: #{px-to-rem(20, $font-base)};
+    --font-size-xxxl: #{px-to-rem(40, $font-base)};
+    --font-size-xxxxl: #{px-to-rem(80, $font-base)};
 
-    --font-size-nav: calc((15 / var(--font-base)) * 1rem);
-    --font-size-get-started-link: calc((20 / var(--font-base)) * 1rem);
-    --font-size-shorten-button: calc((20 / var(--font-base)) * 1rem);
-    --font-size-copy-button: calc((15 / var(--font-base)) * 1rem);
-    --font-size-hero-secondary-text: calc((22 / var(--font-base)) * 1rem);
-    --font-size-advanced-statistics-secondary-text: calc((18 / var(--font-base)) * 1rem);
-    --font-size-footer-label: calc((16 / var(--font-base)) * 1rem);
+    --font-size-nav: #{px-to-rem(15, $font-base)};
+    --font-size-get-started-link: #{px-to-rem(20, $font-base)};
+    --font-size-shorten-button: #{px-to-rem(20, $font-base)};
+    --font-size-copy-button: #{px-to-rem(15, $font-base)};
+    --font-size-hero-secondary-text: #{px-to-rem(22, $font-base)};
+    --font-size-advanced-statistics-secondary-text: #{px-to-rem(18, $font-base)};
+    --font-size-footer-label: #{px-to-rem(16, $font-base)};
   }
 }
 
@@ -72,6 +76,8 @@
 
 @media screen and (min-width: 1400px) {
   :root {
-    --font-base: 16;
+    $font-base: 16;
+
+    --font-size-s: #{px-to-rem(16, $font-base)};
   }
 }
