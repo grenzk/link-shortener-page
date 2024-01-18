@@ -50,30 +50,28 @@
 
 @media screen and (min-width: 768px) {
   :root {
-    --font-size-xs: 1rem;
-    --font-size-m: var(--font-size-xl);
-    --font-size-xxxl: 2.5rem;
+    --font-base: 18;
 
-    --font-size-nav: var(--font-size-s);
-    --font-size-shorten-button: var(--font-size-xl);
-    --font-size-copy-button: var(--font-size-s);
-    --font-size-hero-secondary-text: var(--font-size-s);
-    --font-size-advanced-statistics-secondary-text: var(--font-size-l);
-    --font-size-footer-label: var(--font-size-xs);
+    --font-size-xs: calc((16 / var(--font-base)) * 1rem);
+    --font-size-s: calc((15 / var(--font-base)) * 1rem);
+    --font-size-m: calc((20 / var(--font-base)) * 1rem);
+    --font-size-xxxl: calc((40 / var(--font-base)) * 1rem);
+    --font-size-xxxxl: calc((80 / var(--font-base)) * 1rem);
+
+    --font-size-nav: calc((15 / var(--font-base)) * 1rem);
+    --font-size-get-started-link: calc((20 / var(--font-base)) * 1rem);
+    --font-size-shorten-button: calc((20 / var(--font-base)) * 1rem);
+    --font-size-copy-button: calc((15 / var(--font-base)) * 1rem);
+    --font-size-hero-secondary-text: calc((22 / var(--font-base)) * 1rem);
+    --font-size-advanced-statistics-secondary-text: calc((18 / var(--font-base)) * 1rem);
+    --font-size-footer-label: calc((16 / var(--font-base)) * 1rem);
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1399px) {
-  :root {
-    --font-size-xxxxl: 4.44rem;
-    --font-size-hero-secondary-text: 1.22rem;
-    --font-size-get-started-link: 1.11rem;
-  }
-}
+// @media screen and (min-width: 1024px) and (max-width: 1399px) {}
 
 @media screen and (min-width: 1400px) {
   :root {
-    --font-size-xxxxl: 5rem;
-    --font-size-hero-secondary-text: var(--font-size-xxl);
+    --font-base: 16;
   }
 }
