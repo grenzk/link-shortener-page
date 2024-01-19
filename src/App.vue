@@ -35,7 +35,7 @@ import {
             Build your brand’s recognition and get detailed insights on how your links are
             performing.
           </p>
-          <a href="#" class="hero-link styled-link link-padding-l">Get Started</a>
+          <a href="#" class="hero-link styled-link link-l">Get Started</a>
         </div>
       </div>
     </section>
@@ -96,12 +96,12 @@ import {
       </div>
     </section>
 
-    <section class="call-to-action overflow-hidden">
+    <section class="call-to-action l-flex overflow-hidden">
       <BoostMobile class="call-to-action-bg-img-mobile" />
       <BoostDesktop class="call-to-action-bg-img-desktop" />
 
       <h2 class="call-to-action-title">Boost your links today</h2>
-      <a href="#" class="hero-link styled-link link-padding-l">Get Started</a>
+      <a href="#" class="call-to-action-link styled-link link-l">Get Started</a>
     </section>
   </main>
 
@@ -195,7 +195,6 @@ import {
   }
 
   &-link {
-    font-size: var(--font-size-get-started-link);
     align-self: center;
   }
 }
@@ -318,7 +317,7 @@ import {
     width: 100%;
     height: 3rem;
     font-size: var(--font-size-m);
-    border-radius: var(--border-radius-xs);
+    border-radius: var(--border-radius-form-input);
     padding-left: 1rem;
   }
 
@@ -329,7 +328,7 @@ import {
     font-size: var(--font-size-shorten-button);
     font-weight: var(--font-weight-bold);
     border: none;
-    border-radius: var(--border-radius-xs);
+    border-radius: var(--border-radius-form-input);
     height: 3rem;
   }
 }
@@ -339,16 +338,15 @@ import {
   position: relative;
   background-color: var(--color-primary-dark-violet);
   padding: 5.63rem 0;
-  text-align: center;
-  z-index: -1;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 
   &-bg-img {
     &-mobile,
     &-desktop {
       position: absolute;
       top: 0;
-      right: 0;
-      z-index: -1;
     }
 
     &-desktop {
@@ -360,7 +358,11 @@ import {
     color: var(--color-neutral-white);
     font-size: var(--font-size-xxxl);
     font-weight: var(--font-weight-bold);
-    margin-bottom: 2rem;
+    z-index: 2;
+  }
+
+  &-link {
+    z-index: 2;
   }
 }
 
