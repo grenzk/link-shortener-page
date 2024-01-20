@@ -25,7 +25,7 @@ import {
 <template>
   <SiteHeader />
   <main>
-    <section class="hero l-section overflow-hidden">
+    <section class="hero overflow-hidden">
       <div class="hero-group l-container l-flex">
         <HeroImage class="hero-img svg-img" />
 
@@ -166,6 +166,8 @@ import {
 <style lang="scss">
 // Hero
 .hero {
+  padding-bottom: 10.5rem;
+  
   &-group {
     flex-direction: column;
     row-gap: 2.3rem;

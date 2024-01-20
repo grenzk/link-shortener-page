@@ -44,6 +44,7 @@
   --border-radius-s: 0.625rem;
   --border-radius-l: 1.75rem;
   --border-radius-xl: 50%;
+  --border-radius-form-input: var(--border-radius-xs);
 }
 
 @media screen and (min-width: 768px) {
