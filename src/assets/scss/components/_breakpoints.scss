@@ -27,7 +27,7 @@
 @media screen and (min-width: 768px) {
   .header-group {
     justify-content: flex-start;
-    gap: 2.84rem;
+    gap: var(--space-header-group);
   }
 
   .nav {
@@ -41,7 +41,7 @@
 
       &:nth-child(1),
       &:nth-child(3) {
-        gap: 2rem;
+        gap: var(--space-nav-list);
       }
 
       &:nth-child(3) {
@@ -75,8 +75,8 @@
 
   .form {
     flex-direction: row;
-    padding: 3.25rem 4rem;
-    gap: 1.5rem;
+    padding: var(--space-form-section);
+    gap: var(--space-form-group);
 
     &-bg-img {
       &-mobile {
@@ -101,7 +101,8 @@
   }
 
   .call-to-action {
-    padding: 3.56rem 0;
+    padding: var(--space-call-to-action-section);
+    gap: var(--space-call-to-action-group);
 
     &-bg-img {
       &-mobile {
@@ -122,10 +123,10 @@
   }
 
   .hero {
-    padding: 3rem 0 9rem;
+    padding: var(--space-hero-section);
 
     &-title {
-      margin-bottom: 0.3rem;
+      margin-bottom: var(--space-hero-title);
     }
   }
 }
@@ -147,6 +148,8 @@
   }
 
   .advanced-statistics {
+    padding: var(--space-advanced-statistics-section);
+
     &-bottom-panel {
       flex-direction: row;
       gap: 1.87rem;
