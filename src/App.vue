@@ -167,7 +167,7 @@ import {
 // Hero
 .hero {
   padding-bottom: 10.5rem;
-  
+
   &-group {
     flex-direction: column;
     row-gap: 2.3rem;
@@ -349,6 +349,7 @@ import {
     &-desktop {
       position: absolute;
       top: 0;
+      width: 100%;
     }
 
     &-desktop {
