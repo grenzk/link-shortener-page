@@ -84,14 +84,14 @@
     }
 
     &-input-text {
-      height: 4rem;
-      padding-left: 2rem;
+      height: var(--form-input-height);
+      padding-left: calc(32 / var(--font-base) * 1rem);
     }
 
     &-submit-button {
       flex-basis: 11.75rem;
-      height: 4rem;
-      padding: 0 2.5rem;
+      height: var(--form-input-height);
+      padding: var(--form-button-padding);
     }
   }
 
