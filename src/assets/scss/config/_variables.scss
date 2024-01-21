@@ -55,13 +55,13 @@
     --font-size-s: calc(15 / var(--font-base) * 1rem);
     --font-size-m: calc(20 / var(--font-base) * 1rem);
     --font-size-xxxl: calc(40 / var(--font-base) * 1rem);
-    --font-size-xxxxl: calc(80 / var(--font-base) * 1rem);
+    --font-size-xxxxl: 4rem;
 
     --font-size-nav: calc(15 / var(--font-base) * 1rem);
     --font-size-get-started-link: calc(20 / var(--font-base) * 1rem);
     --font-size-shorten-button: calc(20 / var(--font-base) * 1rem);
     --font-size-copy-button: calc(15 / var(--font-base) * 1rem);
-    --font-size-hero-secondary-text: calc(22 / var(--font-base) * 1rem);
+    --font-size-hero-secondary-text: var(--font-size-l);
     --font-size-advanced-statistics-secondary-text: calc(18 / var(--font-base) * 1rem);
     --font-size-footer-label: calc(16 / var(--font-base) * 1rem);
 
@@ -79,6 +79,13 @@
     --space-call-to-action-group: calc(19.2 / var(--font-base) * 1rem);
 
     --border-radius-form-input: var(--border-radius-s);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --font-size-xxxxl: calc(80 / var(--font-base) * 1rem);
+    --font-size-hero-secondary-text: calc(22 / var(--font-base) * 1rem);
   }
 }
 

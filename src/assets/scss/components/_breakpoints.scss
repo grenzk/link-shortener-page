@@ -12,6 +12,7 @@
   .hero {
     &-img {
       margin: 0 auto;
+      width: 30rem;
     }
 
     &-left-panel {
@@ -60,16 +61,10 @@
   }
 
   .hero {
-    padding: 1rem 0 5rem;
-
-    &-group {
-      flex-direction: row;
-      align-items: center;
-    }
+    padding: var(--space-hero-section);
 
     &-img {
-      order: 1;
-      margin-right: -10rem;
+      width: 35rem;
     }
   }
 
@@ -125,8 +120,23 @@
   .hero {
     padding: var(--space-hero-section);
 
+    &-group {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-img {
+      order: 1;
+      width: 60rem;
+      margin-right: -10rem;
+    }
+
     &-title {
       margin-bottom: var(--space-hero-title);
+    }
+
+    &-secondary-text {
+      width: 80%;
     }
   }
 }
@@ -144,6 +154,10 @@
     &-img {
       width: 78rem;
       margin-right: -16rem;
+    }
+
+    &-secondary-text {
+      width: unset;
     }
   }
 
