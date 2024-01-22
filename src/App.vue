@@ -241,6 +241,7 @@ import {
     padding: 4.81rem 2rem 2rem 2rem;
     border-radius: var(--border-radius-xs);
     max-width: 21.875rem;
+    height: 16.6875rem;
 
     &-icon {
       position: absolute;
@@ -338,7 +339,6 @@ import {
     &-desktop {
       position: absolute;
       top: 0;
-      width: 100%;
     }
 
     &-desktop {
