@@ -103,10 +103,6 @@ onMounted(() => {
     }
   }
 
-  &-link.styled-link:hover {
-    background-color: var(--color-primary-cyan-light);
-  }
-
   &-divider {
     border: 0.5px solid var(--color-neutral-grayish-violet);
     opacity: 0.25;

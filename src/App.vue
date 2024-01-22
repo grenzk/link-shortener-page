@@ -322,17 +322,6 @@ import {
     border-radius: var(--border-radius-form-input);
     padding-left: 1rem;
   }
-
-  &-submit-button {
-    width: 100%;
-    background-color: var(--color-primary-cyan);
-    color: var(--color-neutral-white);
-    font-size: var(--font-size-shorten-button);
-    font-weight: var(--font-weight-bold);
-    border: none;
-    border-radius: var(--border-radius-form-input);
-    height: 3rem;
-  }
 }
 
 // CTA
