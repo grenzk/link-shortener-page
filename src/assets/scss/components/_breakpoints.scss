@@ -118,8 +118,6 @@
   }
 
   .hero {
-    padding: var(--space-hero-section);
-
     &-group {
       flex-direction: row;
       align-items: center;
@@ -165,7 +163,7 @@
     padding: var(--space-advanced-statistics-section);
 
     &-top-panel {
-      margin-bottom:  calc(56 / var(--font-base) * 1rem) ;
+      margin-bottom: calc(56 / var(--font-base) * 1rem);
     }
 
     &-bottom-panel {
