@@ -210,6 +210,7 @@ import {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    margin-bottom: 5.75rem;
   }
 
   &-title {
@@ -222,8 +223,8 @@ import {
   &-secondary-text {
     font-size: var(--font-size-advanced-statistics-secondary-text);
     text-align: center;
-    margin-bottom: 5.75rem;
     max-width: 32rem;
+    line-height: 1.75rem;
   }
 
   &-bottom-panel {
@@ -240,7 +241,6 @@ import {
     padding: 4.81rem 2rem 2rem 2rem;
     border-radius: var(--border-radius-xs);
     max-width: 21.875rem;
-    height: 16.6875rem;
 
     &-icon {
       position: absolute;
@@ -270,7 +270,7 @@ import {
     &-description {
       font-size: var(--font-size-s);
       text-align: center;
-      line-height: normal;
+      line-height: 1.625rem;
     }
 
     &-divider {
@@ -280,7 +280,7 @@ import {
       top: 0;
       left: 0;
       right: 0;
-      height: 985px;
+      height: 980px;
       margin: 0 auto;
     }
   }

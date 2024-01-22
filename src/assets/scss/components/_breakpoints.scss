@@ -164,18 +164,30 @@
   .advanced-statistics {
     padding: var(--space-advanced-statistics-section);
 
+    &-top-panel {
+      margin-bottom:  calc(56 / var(--font-base) * 1rem) ;
+    }
+
     &-bottom-panel {
       flex-direction: row;
-      gap: 1.87rem;
+      gap: var(--space-advanced-statistics-group);
+      height: var(--cards-container-height);
     }
 
     &-card {
+      padding: var(--card-padding);
+
+      &:nth-child(2) {
+        margin-bottom: calc(52.8 / var(--font-base) * 1rem);
+      }
+
       &:nth-child(3) {
-        margin-top: 2.75rem;
+        margin-top: calc(40 / var(--font-base) * 1rem);
       }
 
       &:nth-child(4) {
-        margin-top: 5.5rem;
+        align-self: flex-end;
+        margin-bottom: calc(8 / var(--font-base) * 1rem);
       }
 
       &-icon {
