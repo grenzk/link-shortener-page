@@ -55,9 +55,6 @@ onMounted(() => {
 <style lang="scss">
 .header {
   background-color: var(--color-neutral-white);
-  top: 0;
-  left: 0;
-  z-index: 100;
   margin-bottom: -1rem;
 
   &-group {
