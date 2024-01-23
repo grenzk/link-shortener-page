@@ -1,45 +1,20 @@
 <script setup>
 import InputText from 'primevue/inputtext'
 
-import { SiteHeader } from '@/components'
-import {
-  BrandLogo,
-  HeroImage,
-  ShortenMobile,
-  ShortenDesktop,
-  BoostMobile,
-  BoostDesktop
-} from '@/components/images'
+import { SiteHeader, HeroSection, CallToActionSection, FooterSection } from '@/components'
+import { ShortenMobile, ShortenDesktop } from '@/components/images'
 
 import {
   IconBrandRecognition,
   IconDetailedRecords,
-  IconFullyCustomizable,
-  IconFacebook,
-  IconTwitter,
-  IconPinterest,
-  IconInstagram
+  IconFullyCustomizable
 } from '@/components/icons'
 </script>
 
 <template>
   <SiteHeader />
   <main>
-    <section class="hero overflow-hidden">
-      <div class="hero-group l-container l-flex">
-        <HeroImage class="hero-img svg-img" />
-
-        <div class="hero-left-panel l-flex">
-          <h1 class="hero-title">More than just shorter links</h1>
-          <p class="hero-secondary-text">
-            Build your brand’s recognition and get detailed insights on how your links are
-            performing.
-          </p>
-          <a href="#" class="hero-link styled-link link-l">Get Started</a>
-        </div>
-      </div>
-    </section>
-
+    <HeroSection />
     <section class="advanced-statistics">
       <form class="form l-container overflow-hidden">
         <ShortenMobile class="form-bg-img-mobile" />
@@ -95,112 +70,12 @@ import {
         </div>
       </div>
     </section>
-
-    <section class="call-to-action l-flex overflow-hidden">
-      <BoostMobile class="call-to-action-bg-img-mobile" />
-      <BoostDesktop class="call-to-action-bg-img-desktop" />
-
-      <h2 class="call-to-action-title">Boost your links today</h2>
-      <a href="#" class="call-to-action-link styled-link link-l">Get Started</a>
-    </section>
+    <CallToActionSection />
   </main>
-
-  <footer class="footer">
-    <div class="footer-group l-container l-grid">
-      <a href="#"><BrandLogo class="footer-logo" /></a>
-
-      <div class="footer-content">
-        <h3 class="footer-title">Features</h3>
-        <nav class="footer-nav">
-          <ul aria-label="Footer" class="footer-nav-list l-flex">
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Link Shortening</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Branded Links</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Analytics</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="footer-content">
-        <h3 class="footer-title">Resources</h3>
-        <nav class="footer-nav">
-          <ul aria-label="Footer" class="footer-nav-list l-flex">
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Blog</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Developers</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Support</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="footer-content">
-        <h3 class="footer-title">Company</h3>
-        <nav class="footer-nav">
-          <ul aria-label="Footer" class="footer-nav-list l-flex">
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">About</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Our Team</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Careers</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="footer-content">
-        <ul aria-label="Social links" class="footer-socials l-flex">
-          <li>
-            <a aria-label="facebook" href="#"><IconFacebook class="footer-socials-icon" /></a>
-          </li>
-          <li>
-            <a aria-label="twitter" href="#"><IconTwitter class="footer-socials-icon" /></a>
-          </li>
-          <li>
-            <a aria-label="pinterest" href="#"><IconPinterest class="footer-socials-icon" /></a>
-          </li>
-          <li>
-            <a aria-label="instagram" href="#"><IconInstagram class="footer-socials-icon" /></a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+  <FooterSection />
 </template>
 
 <style lang="scss">
-// Hero
-.hero {
-  padding-bottom: 10.5rem;
-
-  &-group {
-    flex-direction: column;
-    row-gap: 2.3rem;
-  }
-
-  &-img {
-    width: 500px;
-  }
-
-  &-left-panel {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  &-title {
-    color: var(--color-neutral-very-dark-blue);
-    font-size: var(--font-size-xxxxl);
-    font-weight: var(--font-weight-bold);
-    line-height: 114.286%;
-    margin-bottom: 1rem;
-  }
-
-  &-secondary-text {
-    font-size: var(--font-size-hero-secondary-text);
-    line-height: 166.67%;
-    margin-bottom: 2rem;
-  }
-
-  &-link {
-    align-self: center;
-  }
-}
-
 .advanced-statistics {
   position: relative;
   padding: 10rem 0 5rem;
@@ -326,97 +201,6 @@ import {
     font-size: var(--font-size-m);
     border-radius: var(--border-radius-form-input);
     padding-left: 1rem;
-  }
-}
-
-// CTA
-.call-to-action {
-  position: relative;
-  background-color: var(--color-primary-dark-violet);
-  padding: 5.63rem 0;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-
-  &-bg-img {
-    &-mobile,
-    &-desktop {
-      position: absolute;
-      top: 0;
-    }
-
-    &-mobile {
-      width: 100%;
-    }
-
-    &-desktop {
-      display: none;
-    }
-  }
-
-  &-title {
-    color: var(--color-neutral-white);
-    font-size: var(--font-size-xxxl);
-    font-weight: var(--font-weight-bold);
-    z-index: 2;
-  }
-
-  &-link {
-    z-index: 2;
-  }
-}
-
-// Footer
-.footer {
-  padding: 3.37rem 0 3.5rem 0;
-  background-color: var(--color-neutral-very-dark-violet);
-
-  &-group {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-  }
-
-  &-content {
-    margin-bottom: 2.38rem;
-
-    &:nth-child(5) {
-      margin-bottom: unset;
-    }
-  }
-
-  &-logo {
-    width: var(--logo-width);
-    margin-bottom: 3.08rem;
-
-    path {
-      fill: var(--color-neutral-white);
-    }
-  }
-
-  &-title {
-    color: var(--color-neutral-white);
-    font-size: var(--font-size-footer-label);
-    font-weight: var(--font-weight-bold);
-    margin-bottom: 1.38rem;
-  }
-
-  &-nav-list {
-    flex-direction: column;
-    gap: 0.63rem;
-  }
-
-  &-socials {
-    align-items: center;
-    gap: 1.5rem;
-
-    &-icon {
-      width: var(--footer-icon-svg-width);
-    }
-  }
-
-  &-nav-link {
-    color: var(--color-neutral-gray);
   }
 }
 </style>
