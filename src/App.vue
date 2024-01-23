@@ -146,16 +146,16 @@ import {
       <div class="footer-content">
         <ul aria-label="Social links" class="footer-socials l-flex">
           <li>
-            <a aria-label="facebook" href="#"><IconFacebook /></a>
+            <a aria-label="facebook" href="#"><IconFacebook class="footer-socials-icon" /></a>
           </li>
           <li>
-            <a aria-label="twitter" href="#"><IconTwitter /></a>
+            <a aria-label="twitter" href="#"><IconTwitter class="footer-socials-icon" /></a>
           </li>
           <li>
-            <a aria-label="pinterest" href="#"><IconPinterest /></a>
+            <a aria-label="pinterest" href="#"><IconPinterest class="footer-socials-icon" /></a>
           </li>
           <li>
-            <a aria-label="instagram" href="#"><IconInstagram /></a>
+            <a aria-label="instagram" href="#"><IconInstagram class="footer-socials-icon" /></a>
           </li>
         </ul>
       </div>
@@ -248,8 +248,8 @@ import {
       display: inline-block;
       background-color: var(--color-primary-dark-violet);
       border-radius: var(--border-radius-xl);
-      width: 88px;
-      height: 88px;
+      width: var(--card-icon-size);
+      height: var(--card-icon-size);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -258,6 +258,10 @@ import {
       right: 0;
       transform: translateY(-50%);
       margin: 0 auto;
+
+      svg {
+        width: var(--card-icon-svg-width);
+      }
     }
 
     &-title {
@@ -341,6 +345,10 @@ import {
       top: 0;
     }
 
+    &-mobile {
+      width: 100%;
+    }
+
     &-desktop {
       display: none;
     }
@@ -378,10 +386,12 @@ import {
   }
 
   &-logo {
+    width: var(--logo-width);
+    margin-bottom: 3.08rem;
+
     path {
       fill: var(--color-neutral-white);
     }
-    margin-bottom: 3.08rem;
   }
 
   &-title {
@@ -399,6 +409,10 @@ import {
   &-socials {
     align-items: center;
     gap: 1.5rem;
+
+    &-icon {
+      width: var(--footer-icon-svg-width);
+    }
   }
 
   &-nav-link {

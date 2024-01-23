@@ -24,7 +24,7 @@ onMounted(() => {
 <template>
   <header class="header">
     <div class="header-group l-container">
-      <a href="#"><BrandLogo /></a>
+      <a href="#"><BrandLogo class="header-logo" /></a>
 
       <Transition name="fade">
         <nav class="nav" v-if="isShown || isDesktop">
@@ -63,6 +63,10 @@ onMounted(() => {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  &-logo {
+    width: var(--logo-width);
   }
 }
 

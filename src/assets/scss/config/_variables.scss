@@ -2,6 +2,10 @@
   --font-family-sans: 'Poppins', sans-serif;
 
   --header-height: 7rem;
+  --logo-width: calc(121 / 16 * 1rem);
+  --card-icon-size: calc(88 / 16 * 1rem);
+  --card-icon-svg-width: calc(40 / 16 * 1rem);
+  --footer-icon-svg-width: calc(24 / 16 * 1rem);
 
   --color-primary-cyan: hsl(180, 66%, 49%);
   --color-primary-cyan-light: hsl(180, 56%, 75%);
@@ -51,6 +55,11 @@
   :root {
     --font-base: 18;
 
+    --logo-width: calc(121 / var(--font-base) * 1rem);
+    --card-icon-size: calc(88 / var(--font-base) * 1rem);
+    --card-icon-svg-width: calc(40 / var(--font-base) * 1rem);
+    --footer-icon-svg-width: calc(24 / var(--font-base) * 1rem);
+
     --font-size-xs: calc(16 / var(--font-base) * 1rem);
     --font-size-s: calc(15 / var(--font-base) * 1rem);
     --font-size-m: calc(20 / var(--font-base) * 1rem);
@@ -84,7 +93,6 @@
     --cards-container-height: calc(399 / var(--font-base) * 1rem);
     --card-padding: calc(77 / var(--font-base) * 1rem) calc(32 / var(--font-base) * 1rem)
       calc(32 / var(--font-base) * 1rem) calc(32 / var(--font-base) * 1rem);
-
 
     --border-radius-form-input: var(--border-radius-s);
   }
