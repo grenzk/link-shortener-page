@@ -1,6 +1,4 @@
 :root {
-  --font-family-sans: 'Poppins', sans-serif;
-
   --header-height: 7rem;
   --logo-width: calc(121 / 16 * 1rem);
   --card-icon-size: calc(88 / 16 * 1rem);
@@ -23,6 +21,8 @@
   --color-text-header: var(--color-neutral-very-dark-blue);
   --color-text-body: var(--color-neutral-grayish-violet);
   --color-text-muted: var(--color-neutral-gray);
+
+  --font-family-sans: 'Poppins', sans-serif;
 
   --font-size-xs: 0.75rem;
   --font-size-s: 0.9375rem;
