@@ -1,10 +1,6 @@
 .l-container {
   max-width: 1110px;
-  margin: 0 var(--space-l);
-}
-
-.l-section {
-  padding-bottom: 10rem;
+  margin: 0 1.5rem;
 }
 
 .l-grid {
@@ -13,12 +9,4 @@
 
 .l-flex {
   display: flex;
-}
-
-.l-gap-1 {
-  gap: 1.88rem;
-}
-
-.l-gap-2 {
-  gap: 1.5rem;
 }

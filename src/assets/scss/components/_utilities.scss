@@ -1,7 +1,11 @@
 .overflow-hidden {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .display-block {
   display: block;
+}
+
+.text-center {
+  text-align: center;
 }

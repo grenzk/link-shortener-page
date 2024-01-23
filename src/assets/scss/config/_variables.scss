@@ -1,9 +1,12 @@
 :root {
-  --font-family-sans: 'Poppins', sans-serif;
-
   --header-height: 7rem;
+  --logo-width: calc(121 / 16 * 1rem);
+  --card-icon-size: calc(88 / 16 * 1rem);
+  --card-icon-svg-width: calc(40 / 16 * 1rem);
+  --footer-icon-svg-width: calc(24 / 16 * 1rem);
 
   --color-primary-cyan: hsl(180, 66%, 49%);
+  --color-primary-cyan-light: hsl(180, 56%, 75%);
   --color-primary-dark-violet: hsl(257, 27%, 26%);
 
   --color-secondary-red: hsl(0, 87%, 67%);
@@ -18,6 +21,8 @@
   --color-text-header: var(--color-neutral-very-dark-blue);
   --color-text-body: var(--color-neutral-grayish-violet);
   --color-text-muted: var(--color-neutral-gray);
+
+  --font-family-sans: 'Poppins', sans-serif;
 
   --font-size-xs: 0.75rem;
   --font-size-s: 0.9375rem;
@@ -39,42 +44,71 @@
   --font-weight-medium: 500;
   --font-weight-bold: 700;
 
-  --space-l: 1.5rem;
-
   --border-radius-xs: 0.3125rem;
   --border-radius-s: 0.625rem;
   --border-radius-l: 1.75rem;
   --border-radius-xl: 50%;
-
-  --z-fixed: 100;
+  --border-radius-form-input: var(--border-radius-xs);
 }
 
 @media screen and (min-width: 768px) {
   :root {
-    --font-size-xs: 1rem;
-    --font-size-m: var(--font-size-xl);
-    --font-size-xxxl: 2.5rem;
+    --font-base: 18;
 
-    --font-size-nav: var(--font-size-s);
-    --font-size-shorten-button: var(--font-size-xl);
-    --font-size-copy-button: var(--font-size-s);
-    --font-size-hero-secondary-text: var(--font-size-s);
-    --font-size-advanced-statistics-secondary-text: var(--font-size-l);
-    --font-size-footer-label: var(--font-size-xs);
+    --logo-width: calc(121 / var(--font-base) * 1rem);
+    --card-icon-size: calc(88 / var(--font-base) * 1rem);
+    --card-icon-svg-width: calc(40 / var(--font-base) * 1rem);
+    --footer-icon-svg-width: calc(24 / var(--font-base) * 1rem);
+
+    --font-size-xs: calc(16 / var(--font-base) * 1rem);
+    --font-size-s: calc(15 / var(--font-base) * 1rem);
+    --font-size-m: calc(20 / var(--font-base) * 1rem);
+    --font-size-xxl: calc(22 / var(--font-base) * 1rem);
+    --font-size-xxxl: calc(40 / var(--font-base) * 1rem);
+    --font-size-xxxxl: 4rem;
+
+    --font-size-nav: calc(15 / var(--font-base) * 1rem);
+    --font-size-get-started-link: calc(20 / var(--font-base) * 1rem);
+    --font-size-shorten-button: calc(20 / var(--font-base) * 1rem);
+    --font-size-copy-button: calc(15 / var(--font-base) * 1rem);
+    --font-size-hero-secondary-text: var(--font-size-l);
+    --font-size-advanced-statistics-secondary-text: calc(18 / var(--font-base) * 1rem);
+    --font-size-footer-label: calc(16 / var(--font-base) * 1rem);
+
+    --space-header-group: calc(45.44 / var(--font-base) * 1rem);
+    --space-nav-list: calc(32 / var(--font-base) * 1rem);
+    --space-hero-section: calc(56 / var(--font-base) * 1rem) 0 calc(152 / var(--font-base) * 1rem) 0;
+    --space-hero-title: calc(5 / var(--font-base) * 1rem);
+    --space-form-section: calc(52 / var(--font-base) * 1rem) calc(64 / var(--font-base) * 1rem);
+    --space-form-group: calc(24 / var(--font-base) * 1rem);
+    --space-advanced-statistics-section: calc(204 / var(--font-base) * 1rem) 0
+      calc(120 / var(--font-base) * 1rem) 0;
+    --space-advanced-statistics-group: calc(30 / var(--font-base) * 1rem);
+    --space-call-to-action-section: calc(57 / var(--font-base) * 1rem) 0;
+    --space-call-to-action-group: calc(19.2 / var(--font-base) * 1rem);
+
+    --form-input-height: calc(64 / var(--font-base) * 1rem);
+    --form-button-padding: 0 calc(40 / var(--font-base) * 1rem);
+
+    --cards-container-height: calc(399 / var(--font-base) * 1rem);
+    --card-padding: calc(77 / var(--font-base) * 1rem) calc(32 / var(--font-base) * 1rem)
+      calc(32 / var(--font-base) * 1rem) calc(32 / var(--font-base) * 1rem);
+
+    --border-radius-form-input: var(--border-radius-s);
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1399px) {
+@media screen and (min-width: 1024px) {
   :root {
-    --font-size-xxxxl: 4.44rem;
-    --font-size-hero-secondary-text: 1.22rem;
-    --font-size-get-started-link: 1.11rem;
+    --font-size-xxxxl: calc(80 / var(--font-base) * 1rem);
+    --font-size-hero-secondary-text: calc(22 / var(--font-base) * 1rem);
   }
 }
 
 @media screen and (min-width: 1400px) {
   :root {
-    --font-size-xxxxl: 5rem;
-    --font-size-hero-secondary-text: var(--font-size-xxl);
+    --font-base: 16;
+
+    --font-size-s: 0.9375rem;
   }
 }

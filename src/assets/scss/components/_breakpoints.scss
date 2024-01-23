@@ -12,6 +12,7 @@
   .hero {
     &-img {
       margin: 0 auto;
+      width: 30rem;
     }
 
     &-left-panel {
@@ -25,14 +26,9 @@
 }
 
 @media screen and (min-width: 768px) {
-  .l-gap-1,
-  .l-gap-2 {
-    gap: 2rem;
-  }
-
   .header-group {
     justify-content: flex-start;
-    gap: 2.84rem;
+    gap: var(--space-header-group);
   }
 
   .nav {
@@ -43,10 +39,15 @@
     &-list {
       flex-direction: row;
       align-items: center;
-    }
 
-    &-list.l-gap-2 {
-      margin-left: auto;
+      &:nth-child(1),
+      &:nth-child(3) {
+        gap: var(--space-nav-list);
+      }
+
+      &:nth-child(3) {
+        margin-left: auto;
+      }
     }
 
     &-link {
@@ -60,23 +61,17 @@
   }
 
   .hero {
-    padding: 1rem 0 5rem;
-
-    &-group {
-      flex-direction: row;
-      align-items: center;
-    }
+    padding: var(--space-hero-section);
 
     &-img {
-      order: 1;
-      margin-right: -10rem;
+      width: 35rem;
     }
   }
 
   .form {
     flex-direction: row;
-    padding: 3.25rem 4rem;
-    gap: 1.5rem;
+    padding: var(--space-form-section);
+    gap: var(--space-form-group);
 
     &-bg-img {
       &-mobile {
@@ -89,19 +84,20 @@
     }
 
     &-input-text {
-      height: 4rem;
-      padding-left: 2rem;
+      height: var(--form-input-height);
+      padding-left: calc(32 / var(--font-base) * 1rem);
     }
 
     &-submit-button {
       flex-basis: 11.75rem;
-      height: 4rem;
-      padding: 0 2.5rem;
+      height: var(--form-input-height);
+      padding: var(--form-button-padding);
     }
   }
 
   .call-to-action {
-    padding: 3.56rem 0;
+    padding: var(--space-call-to-action-section);
+    gap: var(--space-call-to-action-group);
 
     &-bg-img {
       &-mobile {
@@ -122,10 +118,23 @@
   }
 
   .hero {
-    padding: 3rem 0 9rem;
+    &-group {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &-img {
+      order: 1;
+      width: 60rem;
+      margin-right: -10rem;
+    }
 
     &-title {
-      margin-bottom: 0.3rem;
+      margin-bottom: var(--space-hero-title);
+    }
+
+    &-secondary-text {
+      width: 80%;
     }
   }
 }
@@ -144,26 +153,45 @@
       width: 78rem;
       margin-right: -16rem;
     }
+
+    &-secondary-text {
+      width: unset;
+    }
   }
 
   .advanced-statistics {
+    padding: var(--space-advanced-statistics-section);
+
+    &-top-panel {
+      margin-bottom: calc(56 / var(--font-base) * 1rem);
+    }
+
     &-bottom-panel {
       flex-direction: row;
-      gap: 1.87rem;
+      gap: var(--space-advanced-statistics-group);
+      height: var(--cards-container-height);
     }
 
     &-card {
+      padding: var(--card-padding);
+      height: initial;
+
+      &:nth-child(2) {
+        margin-bottom: calc(52.8 / var(--font-base) * 1rem);
+      }
+
       &:nth-child(3) {
-        margin-top: 2.75rem;
+        margin-top: calc(40 / var(--font-base) * 1rem);
       }
 
       &:nth-child(4) {
-        margin-top: 5.5rem;
+        align-self: flex-end;
+        margin-bottom: calc(8 / var(--font-base) * 1rem);
       }
 
       &-icon {
         right: unset;
-        left: 2rem;
+        left: calc(32 / var(--font-base) * 1rem);
       }
 
       &-title,
@@ -224,6 +252,12 @@
     &-img {
       width: 83rem;
       margin-right: -17.7rem;
+    }
+  }
+
+  .advanced-statistics {
+    &-card {
+      height: 16.6875rem;
     }
   }
 }
