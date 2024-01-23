@@ -191,7 +191,7 @@
 
       &-icon {
         right: unset;
-        left: 2rem;
+        left: calc(32 / var(--font-base) * 1rem);
       }
 
       &-title,
