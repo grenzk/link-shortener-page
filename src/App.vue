@@ -1,14 +1,15 @@
 <script setup>
 import InputText from 'primevue/inputtext'
 
-import { SiteHeader, HeroSection, CallToActionSection, FooterSection } from '@/components'
-import { ShortenMobile, ShortenDesktop } from '@/components/images'
-
 import {
-  IconBrandRecognition,
-  IconDetailedRecords,
-  IconFullyCustomizable
-} from '@/components/icons'
+  SiteHeader,
+  HeroSection,
+  CallToActionSection,
+  FooterSection,
+  CardWithIcon
+} from '@/components'
+
+import { ShortenMobile, ShortenDesktop } from '@/components/images'
 </script>
 
 <template>
@@ -16,7 +17,7 @@ import {
   <main>
     <HeroSection />
     <section class="advanced-statistics">
-      <form class="form l-container overflow-hidden">
+      <form class="form l-container l-flex overflow-hidden">
         <ShortenMobile class="form-bg-img-mobile" />
         <ShortenDesktop class="form-bg-img-desktop" />
 
@@ -41,32 +42,26 @@ import {
         <div class="advanced-statistics-bottom-panel l-flex">
           <div class="advanced-statistics-card-divider"></div>
 
-          <div class="advanced-statistics-card">
-            <div class="advanced-statistics-card-icon"><IconBrandRecognition /></div>
-            <h3 class="advanced-statistics-card-title">Brand Recognition</h3>
-            <p class="advanced-statistics-card-description">
-              Boost your brand recognition with each click. Generic links don’t mean a thing.
-              Branded links help instil confidence in your content.
-            </p>
-          </div>
+          <CardWithIcon
+            icon="IconBrandRecognition"
+            title="Brand Recognition"
+            description="Boost your brand recognition with each click. Generic links don’t mean a thing.
+              Branded links help instil confidence in your content."
+          />
 
-          <div class="advanced-statistics-card">
-            <div class="advanced-statistics-card-icon"><IconDetailedRecords /></div>
-            <h3 class="advanced-statistics-card-title">Detailed Records</h3>
-            <p class="advanced-statistics-card-description">
-              Gain insights into who is clicking your links. Knowing when and where people engage
-              with your content helps inform better decisions.
-            </p>
-          </div>
+          <CardWithIcon
+            icon="IconDetailedRecords"
+            title="Detailed Records"
+            description="Gain insights into who is clicking your links. Knowing when and where people engage
+              with your content helps inform better decisions."
+          />
 
-          <div class="advanced-statistics-card">
-            <div class="advanced-statistics-card-icon"><IconFullyCustomizable /></div>
-            <h3 class="advanced-statistics-card-title">Fully Customizable</h3>
-            <p class="advanced-statistics-card-description">
-              Improve brand awareness and content discoverability through customizable links,
-              supercharging audience engagement.
-            </p>
-          </div>
+          <CardWithIcon
+            icon="IconFullyCustomizable"
+            title="Fully Customizable"
+            description="Improve brand awareness and content discoverability through customizable links,
+              supercharging audience engagement."
+          />
         </div>
       </div>
     </section>
@@ -109,64 +104,8 @@ import {
     justify-content: center;
     gap: 5.75rem;
   }
-
-  &-card {
-    position: relative;
-    background-color: var(--color-neutral-white);
-    padding: 4.81rem 2rem 2rem 2rem;
-    border-radius: var(--border-radius-xs);
-    max-width: 21.875rem;
-    height: 16.6875rem;
-
-    &-icon {
-      position: absolute;
-      display: inline-block;
-      background-color: var(--color-primary-dark-violet);
-      border-radius: var(--border-radius-xl);
-      width: var(--card-icon-size);
-      height: var(--card-icon-size);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      top: 0;
-      left: 0;
-      right: 0;
-      transform: translateY(-50%);
-      margin: 0 auto;
-
-      svg {
-        width: var(--card-icon-svg-width);
-      }
-    }
-
-    &-title {
-      color: var(--color-neutral-very-dark-blue);
-      font-weight: var(--font-weight-bold);
-      font-size: var(--font-size-xxl);
-      text-align: center;
-      margin-bottom: 0.75rem;
-    }
-
-    &-description {
-      font-size: var(--font-size-s);
-      text-align: center;
-      line-height: 1.625rem;
-    }
-
-    &-divider {
-      position: absolute;
-      background-color: var(--color-primary-cyan);
-      width: 8px;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 980px;
-      margin: 0 auto;
-    }
-  }
 }
 
-// Form
 .form {
   position: absolute;
   background-color: var(--color-primary-dark-violet);
@@ -176,7 +115,6 @@ import {
   right: 0;
   transform: translateY(-50%);
   padding: 1.5rem;
-  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
