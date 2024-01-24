@@ -30,6 +30,16 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
         <input class="form-submit-button" type="submit" value="Shorten It!" />
       </form>
 
+      <div class="link l-container l-flex">
+        <a href="#" class="link-old">https://www.frontendmentor.io</a>
+        <div class="link-divider"></div>
+
+        <div class="link-bottom-panel l-flex">
+          <a href="#" class="link-new">https://rel.ink/k4lKyk </a>
+          <button class="link-copy-button">Copy</button>
+        </div>
+      </div>
+
       <div class="advanced-statistics-group l-container">
         <div class="advanced-statistics-top-panel l-flex">
           <h2 class="advanced-statistics-title">Advanced Statistics</h2>
@@ -139,6 +149,42 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
     font-size: var(--font-size-m);
     border-radius: var(--border-radius-form-input);
     padding-left: 1rem;
+  }
+}
+
+.link {
+  --padding: 1rem;
+  --flex-direction: column;
+  --gap: 1rem;
+
+  background-color: var(--color-neutral-white);
+  border-radius: var(--border-radius-xs);
+  padding: var(--padding);
+  flex-direction: var(--flex-direction);
+  gap: var(--gap);
+
+  &-bottom-panel {
+    flex-direction: var(--flex-direction);
+    gap: var(--gap);
+  }
+
+  &-old,
+  &-new {
+    font-size: var(--font-size-copy-button);
+  }
+
+  &-old {
+    color: var(--color-neutral-very-dark-blue);
+  }
+
+  &-new {
+    color: var(--color-primary-cyan);
+  }
+
+  &-divider {
+    border: 0.5px solid var(--color-neutral-grayish-violet);
+    opacity: 0.25;
+    margin: 0 calc(-1 * var(--padding));
   }
 }
 </style>
