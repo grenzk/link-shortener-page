@@ -28,7 +28,8 @@
 }
 
 .styled-link,
-.form-submit-button {
+.form-submit-button,
+.link-copy-button {
   &:hover {
     background-color: var(--color-primary-cyan-light);
   }
