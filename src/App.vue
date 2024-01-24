@@ -30,13 +30,15 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
         <input class="form-submit-button" type="submit" value="Shorten It!" />
       </form>
 
-      <div class="link l-container l-flex">
-        <a href="#" class="link-old">https://www.frontendmentor.io</a>
-        <div class="link-divider"></div>
+      <div class="link-group l-container l-flex">
+        <div class="link l-flex">
+          <a href="#" class="link-old">https://www.frontendmentor.io</a>
+          <div class="link-divider"></div>
 
-        <div class="link-bottom-panel l-flex">
-          <a href="#" class="link-new">https://rel.ink/k4lKyk </a>
-          <button class="link-copy-button">Copy</button>
+          <div class="link-bottom-panel l-flex">
+            <a href="#" class="link-new">https://rel.ink/k4lKyk </a>
+            <button class="link-copy-button">Copy</button>
+          </div>
         </div>
       </div>
 
@@ -83,10 +85,11 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
 <style lang="scss">
 .advanced-statistics {
   position: relative;
-  padding: 10rem 0 5rem;
+  padding: 5rem 0 5rem;
   background-color: var(--color-neutral-light-gray);
 
   &-top-panel {
+    margin-top: 5rem;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
@@ -162,6 +165,12 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
   padding: var(--padding);
   flex-direction: var(--flex-direction);
   gap: var(--gap);
+
+  &-group {
+    margin-top: 1.5rem !important;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
 
   &-bottom-panel {
     flex-direction: var(--flex-direction);
