@@ -40,6 +40,24 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
             <button class="link-copy-button">Copy</button>
           </div>
         </div>
+        <div class="link l-flex">
+          <a href="#" class="link-old">https://www.frontendmentor.io</a>
+          <div class="link-divider"></div>
+
+          <div class="link-bottom-panel l-flex">
+            <a href="#" class="link-new">https://rel.ink/k4lKyk </a>
+            <button class="link-copy-button">Copy</button>
+          </div>
+        </div>
+        <div class="link l-flex">
+          <a href="#" class="link-old">https://www.frontendmentor.io</a>
+          <div class="link-divider"></div>
+
+          <div class="link-bottom-panel l-flex">
+            <a href="#" class="link-new">https://rel.ink/k4lKyk </a>
+            <button class="link-copy-button">Copy</button>
+          </div>
+        </div>
       </div>
 
       <div class="advanced-statistics-group l-container">

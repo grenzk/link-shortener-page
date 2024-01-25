@@ -103,6 +103,11 @@
     justify-content: space-between;
     padding-left: calc(32 / var(--font-base) * 1rem);
 
+    &-group {
+      margin-top: unset !important;
+      gap: var(--space-link-group);
+    }
+
     &-bottom-panel {
       align-items: center;
     }
