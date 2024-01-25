@@ -81,7 +81,8 @@
     --space-hero-title: calc(5 / var(--font-base) * 1rem);
     --space-form-section: calc(52 / var(--font-base) * 1rem) calc(64 / var(--font-base) * 1rem);
     --space-form-group: calc(24 / var(--font-base) * 1rem);
-    --space-advanced-statistics-section: calc(204 / var(--font-base) * 1rem) 0
+    --space-link-group: calc(16 / var(--font-base) * 1rem);
+    --space-advanced-statistics-section: calc(102 / var(--font-base) * 1rem) 0
       calc(120 / var(--font-base) * 1rem) 0;
     --space-advanced-statistics-group: calc(30 / var(--font-base) * 1rem);
     --space-call-to-action-section: calc(57 / var(--font-base) * 1rem) 0;
@@ -89,6 +90,8 @@
 
     --form-input-height: calc(64 / var(--font-base) * 1rem);
     --form-button-padding: 0 calc(40 / var(--font-base) * 1rem);
+    --copy-button-height: calc(40 / var(--font-base) * 1rem);
+    --copy-button-width: calc(103 / var(--font-base) * 1rem);
 
     --cards-container-height: calc(399 / var(--font-base) * 1rem);
     --card-padding: calc(77 / var(--font-base) * 1rem) calc(32 / var(--font-base) * 1rem)

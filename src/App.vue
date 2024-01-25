@@ -6,7 +6,8 @@ import {
   HeroSection,
   CallToActionSection,
   FooterSection,
-  CardWithIcon
+  CardWithIcon,
+  LinkCard
 } from '@/components'
 
 import { ShortenMobile, ShortenDesktop } from '@/components/images'
@@ -29,6 +30,10 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
         />
         <input class="form-submit-button" type="submit" value="Shorten It!" />
       </form>
+
+      <div class="link-group l-container l-flex">
+        <LinkCard />
+      </div>
 
       <div class="advanced-statistics-group l-container">
         <div class="advanced-statistics-top-panel l-flex">
@@ -73,10 +78,11 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
 <style lang="scss">
 .advanced-statistics {
   position: relative;
-  padding: 10rem 0 5rem;
+  padding: 5rem 0 5rem;
   background-color: var(--color-neutral-light-gray);
 
   &-top-panel {
+    margin-top: 5rem;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
@@ -140,5 +146,11 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
     border-radius: var(--border-radius-form-input);
     padding-left: 1rem;
   }
+}
+
+.link-group {
+  margin-top: 1.5rem;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 </style>

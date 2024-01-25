@@ -17,8 +17,20 @@
   height: 3rem;
 }
 
+.link-copy-button {
+  width: 100%;
+  background-color: var(--color-primary-cyan);
+  color: var(--color-neutral-white);
+  font-size: var(--font-size-copy-button);
+  font-weight: var(--font-weight-bold);
+  border: none;
+  border-radius: var(--border-radius-xs);
+  height: 2.5rem;
+}
+
 .styled-link,
-.form-submit-button {
+.form-submit-button,
+.link-copy-button {
   &:hover {
     background-color: var(--color-primary-cyan-light);
   }

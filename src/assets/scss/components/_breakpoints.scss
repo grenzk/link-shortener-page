@@ -95,6 +95,33 @@
     }
   }
 
+  .link {
+    --flex-direction: row;
+    --gap: 1.5rem;
+
+    align-items: center;
+    justify-content: space-between;
+    padding-left: calc(32 / var(--font-base) * 1rem);
+
+    &-group {
+      margin-top: unset;
+      gap: var(--space-link-group);
+    }
+
+    &-bottom-panel {
+      align-items: center;
+    }
+
+    &-divider {
+      display: none;
+    }
+
+    &-copy-button {
+      width: var(--copy-button-width);
+      height: var(--copy-button-height);
+    }
+  }
+
   .call-to-action {
     padding: var(--space-call-to-action-section);
     gap: var(--space-call-to-action-group);
@@ -163,6 +190,7 @@
     padding: var(--space-advanced-statistics-section);
 
     &-top-panel {
+      margin-top: calc(102 / var(--font-base) * 1rem);
       margin-bottom: calc(56 / var(--font-base) * 1rem);
     }
 
