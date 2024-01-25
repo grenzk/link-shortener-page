@@ -1,42 +1,37 @@
-.styled-link {
-  background: var(--color-primary-cyan);
-  font-weight: var(--font-weight-bold);
-  border-radius: var(--border-radius-l);
-  padding: 0.5rem 1.5rem;
-  color: var(--color-neutral-white) !important;
-}
-
-.form-submit-button {
-  width: 100%;
+.button {
   background-color: var(--color-primary-cyan);
   color: var(--color-neutral-white);
-  font-size: var(--font-size-shorten-button);
   font-weight: var(--font-weight-bold);
   border: none;
-  border-radius: var(--border-radius-form-input);
-  height: 3rem;
-}
 
-.link-copy-button {
-  width: 100%;
-  background-color: var(--color-primary-cyan);
-  color: var(--color-neutral-white);
-  font-size: var(--font-size-copy-button);
-  font-weight: var(--font-weight-bold);
-  border: none;
-  border-radius: var(--border-radius-xs);
-  height: 2.5rem;
-}
-
-.styled-link,
-.form-submit-button,
-.link-copy-button {
   &:hover {
     background-color: var(--color-primary-cyan-light);
   }
 }
 
-.link-l {
+.button-link {
+  @extend .button;
+  border-radius: var(--border-radius-l);
+  padding: 0.5rem 1.5rem;
+}
+
+.button-submit {
+  @extend .button;
+  width: 100%;
+  font-size: var(--font-size-shorten-button);
+  border-radius: var(--border-radius-form-input);
+  height: 3rem;
+}
+
+.button-copy {
+  @extend .button;
+  width: 100%;
+  font-size: var(--font-size-copy-button);
+  border-radius: var(--border-radius-xs);
+  height: 2.5rem;
+}
+
+.button-large {
   padding: 0.8rem 2.5rem;
   font-size: var(--font-size-get-started-link);
 }

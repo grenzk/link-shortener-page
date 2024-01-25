@@ -7,7 +7,7 @@
 
     <div class="link-bottom-panel l-flex">
       <a href="#" class="link-new">https://rel.ink/k4lKyk</a>
-      <button class="link-copy-button">Copy</button>
+      <button class="button-copy">Copy</button>
     </div>
   </div>
 </template>

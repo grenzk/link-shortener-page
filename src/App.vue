@@ -28,7 +28,7 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
           v-model="value"
           placeholder="Shorten a link here..."
         />
-        <input class="form-submit-button" type="submit" value="Shorten It!" />
+        <input class="button-submit" type="submit" value="Shorten It!" />
       </form>
 
       <div class="link-group l-container l-flex">
