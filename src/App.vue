@@ -158,7 +158,7 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
 .link {
   --padding: 1rem;
   --flex-direction: column;
-  --gap: 1rem;
+  --gap: 0.8rem;
 
   background-color: var(--color-neutral-white);
   border-radius: var(--border-radius-xs);
@@ -179,7 +179,7 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
 
   &-old,
   &-new {
-    font-size: var(--font-size-copy-button);
+    font-size: var(--font-size-m);
   }
 
   &-old {
