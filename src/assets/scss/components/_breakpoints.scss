@@ -88,7 +88,7 @@
       padding-left: calc(32 / var(--font-base) * 1rem);
     }
 
-    &-submit-button {
+    .button-submit {
       flex-basis: 11.75rem;
       height: var(--form-input-height);
       padding: var(--form-button-padding);
@@ -116,7 +116,7 @@
       display: none;
     }
 
-    &-copy-button {
+    .button-copy {
       width: var(--copy-button-width);
       height: var(--copy-button-height);
     }

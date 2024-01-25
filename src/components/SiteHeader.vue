@@ -39,7 +39,7 @@ onMounted(() => {
           <ul class="nav-list l-flex">
             <li class="nav-item text-center"><a href="#" class="nav-link">Login</a></li>
             <li class="nav-item text-center">
-              <a href="#" class="nav-link styled-link display-block">Sign Up</a>
+              <a href="#" class="button-link display-block">Sign Up</a>
             </li>
           </ul>
         </nav>
