@@ -185,7 +185,7 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
   gap: var(--gap);
 
   &-group {
-    margin-top: 1.5rem !important;
+    margin-top: 1.5rem;
     flex-direction: column;
     gap: 1.5rem;
   }

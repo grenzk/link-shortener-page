@@ -104,7 +104,7 @@
     padding-left: calc(32 / var(--font-base) * 1rem);
 
     &-group {
-      margin-top: unset !important;
+      margin-top: unset;
       gap: var(--space-link-group);
     }
 
