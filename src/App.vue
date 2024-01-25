@@ -6,7 +6,8 @@ import {
   HeroSection,
   CallToActionSection,
   FooterSection,
-  CardWithIcon
+  CardWithIcon,
+  LinkCard
 } from '@/components'
 
 import { ShortenMobile, ShortenDesktop } from '@/components/images'
@@ -31,33 +32,7 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
       </form>
 
       <div class="link-group l-container l-flex">
-        <div class="link l-flex">
-          <a href="#" class="link-old">https://www.frontendmentor.io</a>
-          <div class="link-divider"></div>
-
-          <div class="link-bottom-panel l-flex">
-            <a href="#" class="link-new">https://rel.ink/k4lKyk </a>
-            <button class="link-copy-button">Copy</button>
-          </div>
-        </div>
-        <div class="link l-flex">
-          <a href="#" class="link-old">https://www.frontendmentor.io</a>
-          <div class="link-divider"></div>
-
-          <div class="link-bottom-panel l-flex">
-            <a href="#" class="link-new">https://rel.ink/k4lKyk </a>
-            <button class="link-copy-button">Copy</button>
-          </div>
-        </div>
-        <div class="link l-flex">
-          <a href="#" class="link-old">https://www.frontendmentor.io</a>
-          <div class="link-divider"></div>
-
-          <div class="link-bottom-panel l-flex">
-            <a href="#" class="link-new">https://rel.ink/k4lKyk </a>
-            <button class="link-copy-button">Copy</button>
-          </div>
-        </div>
+        <LinkCard />
       </div>
 
       <div class="advanced-statistics-group l-container">
@@ -173,45 +148,9 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
   }
 }
 
-.link {
-  --padding: 1rem;
-  --flex-direction: column;
-  --gap: 0.8rem;
-
-  background-color: var(--color-neutral-white);
-  border-radius: var(--border-radius-xs);
-  padding: var(--padding);
-  flex-direction: var(--flex-direction);
-  gap: var(--gap);
-
-  &-group {
-    margin-top: 1.5rem;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  &-bottom-panel {
-    flex-direction: var(--flex-direction);
-    gap: var(--gap);
-  }
-
-  &-old,
-  &-new {
-    font-size: var(--font-size-m);
-  }
-
-  &-old {
-    color: var(--color-neutral-very-dark-blue);
-  }
-
-  &-new {
-    color: var(--color-primary-cyan);
-  }
-
-  &-divider {
-    border: 0.5px solid var(--color-neutral-grayish-violet);
-    opacity: 0.25;
-    margin: 0 calc(-1 * var(--padding));
-  }
+.link-group {
+  margin-top: 1.5rem;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 </style>
