@@ -67,13 +67,13 @@
     --font-size-xxxl: calc(40 / var(--font-base) * 1rem);
     --font-size-xxxxl: 4rem;
 
-    --font-size-nav: calc(15 / var(--font-base) * 1rem);
-    --font-size-get-started-link: calc(20 / var(--font-base) * 1rem);
-    --font-size-shorten-button: calc(20 / var(--font-base) * 1rem);
-    --font-size-copy-button: calc(15 / var(--font-base) * 1rem);
+    --font-size-nav: var(--font-size-s);
+    --font-size-get-started-link: var(--font-size-m);
+    --font-size-shorten-button: var(--font-size-m);
+    --font-size-copy-button: var(--font-size-s);
     --font-size-hero-secondary-text: var(--font-size-l);
     --font-size-advanced-statistics-secondary-text: calc(18 / var(--font-base) * 1rem);
-    --font-size-footer-label: calc(16 / var(--font-base) * 1rem);
+    --font-size-footer-label: var(--font-size-xs);
 
     --space-header-group: calc(45.44 / var(--font-base) * 1rem);
     --space-nav-list: calc(32 / var(--font-base) * 1rem);
