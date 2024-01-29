@@ -1,4 +1,6 @@
 <script setup>
+import { useForm } from 'vee-validate'
+import * as Yup from 'yup'
 import InputText from 'primevue/inputtext'
 
 import {
@@ -11,6 +13,21 @@ import {
 } from '@/components'
 
 import { ShortenMobile, ShortenDesktop } from '@/components/images'
+
+const schema = Yup.object({
+  website: Yup.string().url().required('Please add a link')
+})
+
+const { defineField, handleSubmit, resetForm, errors } = useForm({
+  validationSchema: schema
+})
+
+const [website] = defineField('website')
+
+const onSubmit = handleSubmit((values) => {
+  console.log(values)
+  resetForm()
+})
 </script>
 
 <template>
@@ -18,16 +35,18 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
   <main>
     <HeroSection />
     <section class="advanced-statistics">
-      <form class="form l-container l-flex overflow-hidden">
+      <form class="form l-container l-flex overflow-hidden" @submit="onSubmit">
         <ShortenMobile class="form-bg-img-mobile" />
         <ShortenDesktop class="form-bg-img-desktop" />
 
         <InputText
-          type="text"
           class="form-input-text"
-          v-model="value"
+          :class="{ 'p-invalid': errors.website }"
+          v-model="website"
+          aria-described="website-help"
           placeholder="Shorten a link here..."
         />
+        <small id="website-help" class="p-error">{{ errors.website }}</small>
         <input class="button-submit" type="submit" value="Shorten It!" />
       </form>
 
