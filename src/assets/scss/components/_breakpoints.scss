@@ -83,9 +83,14 @@
       }
     }
 
+    &-top-panel {
+      height: var(--form-input-height);
+    }
+
     &-input-text {
       height: var(--form-input-height);
       padding-left: calc(32 / var(--font-base) * 1rem);
+      margin-bottom: 0.25rem;
     }
 
     .button-submit {

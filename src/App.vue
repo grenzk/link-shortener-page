@@ -70,14 +70,16 @@ const onSubmit = handleSubmit((values) => {
         <ShortenMobile class="form-bg-img-mobile" />
         <ShortenDesktop class="form-bg-img-desktop" />
 
-        <InputText
-          class="form-input-text"
-          :class="{ 'p-invalid': errors.website }"
-          v-model="website"
-          aria-described="website-help"
-          placeholder="Shorten a link here..."
-        />
-        <small id="website-help" class="p-error">{{ errors.website }}</small>
+        <div class="form-top-panel">
+          <InputText
+            class="form-input-text"
+            :class="{ 'p-invalid': errors.website }"
+            v-model="website"
+            aria-described="website-help"
+            placeholder="Shorten a link here..."
+          />
+          <small id="website-help" class="p-error">{{ errors.website }}</small>
+        </div>
         <input class="button-submit" type="submit" value="Shorten It!" />
       </form>
 
@@ -194,12 +196,30 @@ const onSubmit = handleSubmit((values) => {
     }
   }
 
+  &-top-panel {
+    width: 100%;
+  }
+
   &-input-text {
     width: 100%;
     height: 3rem;
     font-size: var(--font-size-m);
     border-radius: var(--border-radius-form-input);
     padding-left: 1rem;
+  }
+
+  &-input-text.p-invalid {
+    border: 3px solid var(--color-secondary-red);
+
+    &::placeholder {
+      color: var(--color-secondary-red);
+    }
+  }
+
+  .p-error {
+    color: var(--color-secondary-red);
+    font-size: var(--font-size-xs);
+    font-style: italic;
   }
 }
 
