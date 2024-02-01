@@ -1,12 +1,17 @@
-<script setup></script>
+<script setup>
+defineProps({
+  longUrl: String,
+  shortUrl: String
+})
+</script>
 
 <template>
   <div class="link l-flex">
-    <a href="#" class="link-old">https://www.frontendmentor.io</a>
+    <a :href="longUrl" class="link-old">{{ longUrl }}</a>
     <div class="link-divider"></div>
 
     <div class="link-bottom-panel l-flex">
-      <a href="#" class="link-new">https://rel.ink/k4lKyk</a>
+      <a :href="shortUrl" class="link-new">{{ shortUrl }}</a>
       <button class="button-copy">Copy</button>
     </div>
   </div>

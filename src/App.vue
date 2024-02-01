@@ -1,8 +1,11 @@
 <script setup>
+import { ref } from 'vue'
 import { useForm } from 'vee-validate'
+import Axios from 'axios'
 import * as Yup from 'yup'
-import InputText from 'primevue/inputtext'
+import { API_ACCESS_TOKEN, API_ENDPOINT } from '@/config'
 
+import InputText from 'primevue/inputtext'
 import {
   SiteHeader,
   HeroSection,
@@ -14,6 +17,8 @@ import {
 
 import { ShortenMobile, ShortenDesktop } from '@/components/images'
 
+const shortenLinks = ref([])
+
 const schema = Yup.object({
   website: Yup.string().url().required('Please add a link')
 })
@@ -24,8 +29,34 @@ const { defineField, handleSubmit, resetForm, errors } = useForm({
 
 const [website] = defineField('website')
 
+const fetchShortenLink = async (input) => {
+  try {
+    const response = await Axios.post(
+      API_ENDPOINT,
+      {
+        long_url: input
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${API_ACCESS_TOKEN}`
+        }
+      }
+    )
+    const shortLink = response.data
+
+    shortenLinks.value.push({
+      id: shortLink.id,
+      longUrl: shortLink.long_url,
+      shortUrl: shortLink.link
+    })
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 const onSubmit = handleSubmit((values) => {
-  console.log(values)
+  fetchShortenLink(values.website)
   resetForm()
 })
 </script>
@@ -50,8 +81,13 @@ const onSubmit = handleSubmit((values) => {
         <input class="button-submit" type="submit" value="Shorten It!" />
       </form>
 
-      <div class="link-group l-container l-flex">
-        <LinkCard />
+      <div v-if="shortenLinks.length" class="link-group l-container l-flex">
+        <LinkCard
+          v-for="link in shortenLinks"
+          :key="link.id"
+          :long-url="link.longUrl"
+          :short-url="link.shortUrl"
+        />
       </div>
 
       <div class="advanced-statistics-group l-container">
