@@ -41,6 +41,10 @@ defineProps({
 
   &-old {
     color: var(--color-neutral-very-dark-blue);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 485px;
   }
 
   &-new {
