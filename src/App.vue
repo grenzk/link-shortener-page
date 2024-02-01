@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { onBeforeMount, ref } from 'vue'
 import { useForm } from 'vee-validate'
 import Axios from 'axios'
 import * as Yup from 'yup'
@@ -50,6 +50,7 @@ const fetchShortenLink = async (input) => {
       longUrl: shortLink.long_url,
       shortUrl: shortLink.link
     })
+    localStorage.setItem('cachedResponse', JSON.stringify(shortenLinks.value))
   } catch (error) {
     console.error(error)
   }
@@ -58,6 +59,14 @@ const fetchShortenLink = async (input) => {
 const onSubmit = handleSubmit((values) => {
   fetchShortenLink(values.website)
   resetForm()
+})
+
+onBeforeMount(() => {
+  const cachedResponse = localStorage.getItem('cachedResponse')
+
+  if (cachedResponse) {
+    shortenLinks.value = JSON.parse(cachedResponse)
+  }
 })
 </script>
 
