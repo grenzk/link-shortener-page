@@ -31,6 +31,10 @@
   height: 2.5rem;
 }
 
+.button-copy.is-pressed {
+  background-color: var(--color-primary-dark-violet);
+}
+
 .button-large {
   padding: 0.8rem 2.5rem;
   font-size: var(--font-size-get-started-link);

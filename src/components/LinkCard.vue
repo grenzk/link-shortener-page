@@ -1,7 +1,8 @@
 <script setup>
 defineProps({
   longUrl: String,
-  shortUrl: String
+  shortUrl: String,
+  isCopied: Boolean
 })
 </script>
 
@@ -12,7 +13,13 @@ defineProps({
 
     <div class="link-bottom-panel l-flex">
       <a :href="shortUrl" class="link-new">{{ shortUrl }}</a>
-      <button class="button-copy">Copy</button>
+      <button
+        class="button-copy"
+        :class="{ 'is-pressed': isCopied }"
+        @click="$emit('copy', shortUrl)"
+      >
+        {{ isCopied ? 'Copied!' : 'Copy' }}
+      </button>
     </div>
   </div>
 </template>

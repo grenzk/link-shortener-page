@@ -48,7 +48,8 @@ const fetchShortenLink = async (input) => {
     shortenLinks.value.push({
       id: shortLink.id,
       longUrl: shortLink.long_url,
-      shortUrl: shortLink.link
+      shortUrl: shortLink.link,
+      isPressed: false
     })
     localStorage.setItem('cachedResponse', JSON.stringify(shortenLinks.value))
   } catch (error) {
@@ -60,6 +61,17 @@ const onSubmit = handleSubmit((values) => {
   fetchShortenLink(values.website)
   resetForm()
 })
+
+const copyLink = (shortUrl) => {
+  navigator.clipboard.writeText(shortUrl)
+
+  shortenLinks.value = shortenLinks.value.map((link) => {
+    if (link.shortUrl === shortUrl) {
+      return { ...link, isPressed: true }
+    }
+    return link
+  })
+}
 
 onBeforeMount(() => {
   const cachedResponse = localStorage.getItem('cachedResponse')
@@ -98,6 +110,8 @@ onBeforeMount(() => {
           :key="link.id"
           :long-url="link.longUrl"
           :short-url="link.shortUrl"
+          :is-copied="link.isPressed"
+          @copy="copyLink"
         />
       </div>
 
