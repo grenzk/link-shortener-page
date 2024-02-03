@@ -162,7 +162,8 @@
     }
 
     &-title {
-      margin-bottom: var(--space-hero-title);
+      letter-spacing: -2px;
+      margin-bottom: unset;
     }
 
     &-secondary-text {
@@ -278,8 +279,6 @@
   }
 
   .hero {
-    padding-top: 3.5rem;
-
     &-group {
       gap: 6rem;
     }
