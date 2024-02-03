@@ -24,7 +24,7 @@ onMounted(() => {
 <template>
   <header class="header">
     <div class="header-group l-container">
-      <a href="#"><BrandLogo class="header-logo" /></a>
+      <a href="/home"><BrandLogo class="header-logo" /></a>
 
       <Transition name="fade">
         <nav class="main-nav" v-if="isShown || isDesktop">

@@ -6,7 +6,7 @@ import { IconFacebook, IconTwitter, IconPinterest, IconInstagram } from '@/compo
 <template>
   <footer class="footer">
     <div class="footer-group l-container l-grid">
-      <a href="#home"><BrandLogo class="footer-logo" /></a>
+      <a href="/home"><BrandLogo class="footer-logo" /></a>
 
       <div class="footer-content">
         <h3 class="footer-title">Features</h3>
