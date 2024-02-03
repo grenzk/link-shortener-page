@@ -11,7 +11,7 @@ import { IconFacebook, IconTwitter, IconPinterest, IconInstagram } from '@/compo
       <div class="footer-content">
         <h3 class="footer-title">Features</h3>
         <nav class="footer-nav">
-          <ul aria-label="Footer" class="footer-nav-list l-flex">
+          <ul class="footer-nav-list l-flex">
             <li class="footer-nav-item">
               <a href="/link-shortening" aria-label="Link Shortening" class="footer-nav-link"
                 >Link Shortening</a
@@ -32,7 +32,7 @@ import { IconFacebook, IconTwitter, IconPinterest, IconInstagram } from '@/compo
       <div class="footer-content">
         <h3 class="footer-title">Resources</h3>
         <nav class="footer-nav">
-          <ul aria-label="Footer" class="footer-nav-list l-flex">
+          <ul class="footer-nav-list l-flex">
             <li class="footer-nav-item">
               <a href="/blog" aria-label="Blog" class="footer-nav-link">Blog</a>
             </li>
@@ -49,7 +49,7 @@ import { IconFacebook, IconTwitter, IconPinterest, IconInstagram } from '@/compo
       <div class="footer-content">
         <h3 class="footer-title">Company</h3>
         <nav class="footer-nav">
-          <ul aria-label="Footer" class="footer-nav-list l-flex">
+          <ul class="footer-nav-list l-flex">
             <li class="footer-nav-item">
               <a href="/about" aria-label="About" class="footer-nav-link">About</a>
             </li>
@@ -67,7 +67,7 @@ import { IconFacebook, IconTwitter, IconPinterest, IconInstagram } from '@/compo
       </div>
 
       <div class="footer-content">
-        <ul aria-label="Social links" class="footer-socials l-flex">
+        <ul class="footer-socials l-flex">
           <li>
             <a href="/facebook" aria-label="Facebook"
               ><IconFacebook class="footer-socials-icon"
