@@ -27,33 +27,33 @@ onMounted(() => {
       <a href="/home" aria-label="Home"><BrandLogo class="header-logo" /></a>
 
       <Transition name="fade">
-        <nav id="main-nav" class="main-nav" v-if="isShown || isDesktop">
-          <ul class="main-nav-list l-flex">
-            <li class="main-nav-item text-center">
-              <a href="#features" aria-label="Features" class="main-nav-link">Features</a>
+        <nav class="nav-main" v-if="isShown || isDesktop">
+          <ul class="nav-main-list l-flex">
+            <li class="nav-main-item text-center">
+              <a href="#features" aria-label="Features" class="nav-main-link">Features</a>
             </li>
-            <li class="main-nav-item text-center">
-              <a href="#pricing" aria-label="Pricing" class="main-nav-link">Pricing</a>
+            <li class="nav-main-item text-center">
+              <a href="#pricing" aria-label="Pricing" class="nav-main-link">Pricing</a>
             </li>
-            <li class="main-nav-item text-center">
-              <a href="#resources" aria-label="Resources" class="main-nav-link">Resources</a>
+            <li class="nav-main-item text-center">
+              <a href="#resources" aria-label="Resources" class="nav-main-link">Resources</a>
             </li>
           </ul>
 
-          <div class="main-nav-divider"></div>
+          <div class="nav-main-divider"></div>
 
-          <ul class="main-nav-list l-flex">
-            <li class="main-nav-item text-center">
-              <a href="/login" aria-label="Login" class="main-nav-link">Login</a>
+          <ul class="nav-main-list l-flex">
+            <li class="nav-main-item text-center">
+              <a href="/login" aria-label="Login" class="nav-main-link">Login</a>
             </li>
-            <li class="main-nav-item text-center">
+            <li class="nav-main-item text-center">
               <a href="/sign-up" aria-label="Sign Up" class="button-link display-block">Sign Up</a>
             </li>
           </ul>
         </nav>
       </Transition>
 
-      <button class="main-nav-toggle" @click="toggleNav">
+      <button class="nav-main-toggle" @click="toggleNav">
         <IconHamburger />
       </button>
     </div>
@@ -78,7 +78,7 @@ onMounted(() => {
   }
 }
 
-.main-nav {
+.nav-main {
   @media screen and (max-width: 767px) {
     position: absolute;
     top: 6rem;
