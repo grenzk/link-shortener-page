@@ -44,7 +44,7 @@ Users should be able to:
 - SASS
 - Vue
 - PrimeVue
-- Clean URI API
+- Bitly API
 
 ## Acknowledgments
 
