@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution](https://github.com/grenzk/shortly)
-- [Live Site](https://your-live-site-url.com)
+- [Solution](https://github.com/grenzk/url-shortening-api-landing-page)
+- [Live Site](https://url-shortening-api-landing-page-eight.vercel.app/)
 
 ## My process
 
