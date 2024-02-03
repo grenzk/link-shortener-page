@@ -113,6 +113,10 @@ import { IconFacebook, IconTwitter, IconPinterest, IconInstagram } from '@/compo
 
   &-nav-link {
     color: var(--color-neutral-gray);
+
+    &:hover {
+      color: var(--color-primary-cyan);
+    }
   }
 }
 </style>
