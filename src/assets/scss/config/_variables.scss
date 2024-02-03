@@ -53,8 +53,8 @@
 
 @media screen and (min-width: 768px) {
   :root {
-    --header-height: 9.3rem;
     --font-base: 18;
+    --header-height: calc(148.8 / var(--font-base) * 1rem);
 
     --logo-width: calc(121 / var(--font-base) * 1rem);
     --card-icon-size: calc(88 / var(--font-base) * 1rem);
