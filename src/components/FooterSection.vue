@@ -45,16 +45,16 @@ import { IconFacebook, IconTwitter, IconPinterest, IconInstagram } from '@/compo
       <div class="footer-content">
         <ul aria-label="Social links" class="footer-socials l-flex">
           <li>
-            <a aria-label="facebook" href="#"><IconFacebook class="footer-socials-icon" /></a>
+            <a aria-label="facebook" href="/facebook"><IconFacebook class="footer-socials-icon" /></a>
           </li>
           <li>
-            <a aria-label="twitter" href="#"><IconTwitter class="footer-socials-icon" /></a>
+            <a aria-label="twitter" href="/twitter"><IconTwitter class="footer-socials-icon" /></a>
           </li>
           <li>
-            <a aria-label="pinterest" href="#"><IconPinterest class="footer-socials-icon" /></a>
+            <a aria-label="pinterest" href="/pinterest"><IconPinterest class="footer-socials-icon" /></a>
           </li>
           <li>
-            <a aria-label="instagram" href="#"><IconInstagram class="footer-socials-icon" /></a>
+            <a aria-label="instagram" href="/instagram"><IconInstagram class="footer-socials-icon" /></a>
           </li>
         </ul>
       </div>
