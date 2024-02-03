@@ -8,7 +8,7 @@ import { BoostMobile, BoostDesktop } from '@/components/images'
     <BoostDesktop class="call-to-action-bg-img-desktop" />
 
     <h2 class="call-to-action-title">Boost your links today</h2>
-    <a href="#" class="call-to-action-link button-link button-large">Get Started</a>
+    <a href="/get-started" class="call-to-action-link button-link button-large">Get Started</a>
   </section>
 </template>
 

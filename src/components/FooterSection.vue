@@ -6,15 +6,15 @@ import { IconFacebook, IconTwitter, IconPinterest, IconInstagram } from '@/compo
 <template>
   <footer class="footer">
     <div class="footer-group l-container l-grid">
-      <a href="#"><BrandLogo class="footer-logo" /></a>
+      <a href="#home"><BrandLogo class="footer-logo" /></a>
 
       <div class="footer-content">
         <h3 class="footer-title">Features</h3>
         <nav class="footer-nav">
           <ul aria-label="Footer" class="footer-nav-list l-flex">
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Link Shortening</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Branded Links</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Analytics</a></li>
+            <li class="footer-nav-item"><a href="/link-shortening" class="footer-nav-link">Link Shortening</a></li>
+            <li class="footer-nav-item"><a href="/branded-links" class="footer-nav-link">Branded Links</a></li>
+            <li class="footer-nav-item"><a href="/analytics" class="footer-nav-link">Analytics</a></li>
           </ul>
         </nav>
       </div>
@@ -23,9 +23,9 @@ import { IconFacebook, IconTwitter, IconPinterest, IconInstagram } from '@/compo
         <h3 class="footer-title">Resources</h3>
         <nav class="footer-nav">
           <ul aria-label="Footer" class="footer-nav-list l-flex">
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Blog</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Developers</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Support</a></li>
+            <li class="footer-nav-item"><a href="/blog" class="footer-nav-link">Blog</a></li>
+            <li class="footer-nav-item"><a href="/developers" class="footer-nav-link">Developers</a></li>
+            <li class="footer-nav-item"><a href="/support" class="footer-nav-link">Support</a></li>
           </ul>
         </nav>
       </div>
@@ -34,10 +34,10 @@ import { IconFacebook, IconTwitter, IconPinterest, IconInstagram } from '@/compo
         <h3 class="footer-title">Company</h3>
         <nav class="footer-nav">
           <ul aria-label="Footer" class="footer-nav-list l-flex">
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">About</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Our Team</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Careers</a></li>
-            <li class="footer-nav-item"><a href="#" class="footer-nav-link">Contact</a></li>
+            <li class="footer-nav-item"><a href="/about" class="footer-nav-link">About</a></li>
+            <li class="footer-nav-item"><a href="/our-team" class="footer-nav-link">Our Team</a></li>
+            <li class="footer-nav-item"><a href="/careers" class="footer-nav-link">Careers</a></li>
+            <li class="footer-nav-item"><a href="/contact" class="footer-nav-link">Contact</a></li>
           </ul>
         </nav>
       </div>

@@ -96,7 +96,7 @@ onBeforeMount(() => {
             class="form-input-text"
             :class="{ 'p-invalid': errors.website }"
             v-model="website"
-            aria-described="website-help"
+            aria-describedby="website-help"
             placeholder="Shorten a link here..."
           />
           <small id="website-help" class="p-error">{{ errors.website }}</small>

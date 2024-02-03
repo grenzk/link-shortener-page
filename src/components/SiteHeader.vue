@@ -27,25 +27,29 @@ onMounted(() => {
       <a href="#"><BrandLogo class="header-logo" /></a>
 
       <Transition name="fade">
-        <nav class="nav" v-if="isShown || isDesktop">
-          <ul class="nav-list l-flex">
-            <li class="nav-item text-center"><a href="#" class="nav-link">Features</a></li>
-            <li class="nav-item text-center"><a href="#" class="nav-link">Pricing</a></li>
-            <li class="nav-item text-center"><a href="#" class="nav-link">Resources</a></li>
+        <nav class="main-nav" v-if="isShown || isDesktop">
+          <ul class="main-nav-list l-flex">
+            <li class="main-nav-item text-center">
+              <a href="#features" class="main-nav-link">Features</a>
+            </li>
+            <li class="main-nav-item text-center"><a href="#pricing" class="main-nav-link">Pricing</a></li>
+            <li class="main-nav-item text-center">
+              <a href="#resources" class="main-nav-link">Resources</a>
+            </li>
           </ul>
 
-          <div class="nav-divider"></div>
+          <div class="main-nav-divider"></div>
 
-          <ul class="nav-list l-flex">
-            <li class="nav-item text-center"><a href="#" class="nav-link">Login</a></li>
-            <li class="nav-item text-center">
-              <a href="#" class="button-link display-block">Sign Up</a>
+          <ul class="main-nav-list l-flex">
+            <li class="main-nav-item text-center"><a href="/login" class="main-nav-link">Login</a></li>
+            <li class="main-nav-item text-center">
+              <a href="/sign-up" class="button-link display-block">Sign Up</a>
             </li>
           </ul>
         </nav>
       </Transition>
 
-      <button class="nav-toggle" @click="toggleNav">
+      <button class="main-nav-toggle" @click="toggleNav">
         <IconHamburger />
       </button>
     </div>
@@ -70,7 +74,7 @@ onMounted(() => {
   }
 }
 
-.nav {
+.main-nav {
   @media screen and (max-width: 767px) {
     position: absolute;
     top: 6rem;
