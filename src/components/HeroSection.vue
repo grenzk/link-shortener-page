@@ -12,7 +12,9 @@ import { HeroImage } from '@/components/images'
         <p class="hero-secondary-text">
           Build your brand’s recognition and get detailed insights on how your links are performing.
         </p>
-        <a href="/get-started" class="hero-link button-link button-large">Get Started</a>
+        <a href="/get-started" aria-label="Get Started" class="hero-link button-link button-large"
+          >Get Started</a
+        >
       </div>
     </div>
   </section>

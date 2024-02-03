@@ -24,26 +24,30 @@ onMounted(() => {
 <template>
   <header class="header">
     <div class="header-group l-container">
-      <a href="/home"><BrandLogo class="header-logo" /></a>
+      <a href="/home" aria-label="Home"><BrandLogo class="header-logo" /></a>
 
       <Transition name="fade">
         <nav class="main-nav" v-if="isShown || isDesktop">
           <ul class="main-nav-list l-flex">
             <li class="main-nav-item text-center">
-              <a href="#features" class="main-nav-link">Features</a>
+              <a href="#features" aria-label="Features" class="main-nav-link">Features</a>
             </li>
-            <li class="main-nav-item text-center"><a href="#pricing" class="main-nav-link">Pricing</a></li>
             <li class="main-nav-item text-center">
-              <a href="#resources" class="main-nav-link">Resources</a>
+              <a href="#pricing" aria-label="Pricing" class="main-nav-link">Pricing</a>
+            </li>
+            <li class="main-nav-item text-center">
+              <a href="#resources" aria-label="Resources" class="main-nav-link">Resources</a>
             </li>
           </ul>
 
           <div class="main-nav-divider"></div>
 
           <ul class="main-nav-list l-flex">
-            <li class="main-nav-item text-center"><a href="/login" class="main-nav-link">Login</a></li>
             <li class="main-nav-item text-center">
-              <a href="/sign-up" class="button-link display-block">Sign Up</a>
+              <a href="/login" aria-label="Login" class="main-nav-link">Login</a>
+            </li>
+            <li class="main-nav-item text-center">
+              <a href="/sign-up" aria-label="Sign Up" class="button-link display-block">Sign Up</a>
             </li>
           </ul>
         </nav>
