@@ -27,12 +27,7 @@ onMounted(() => {
       <a href="/home" aria-label="Home"><BrandLogo class="header-logo" /></a>
 
       <Transition name="fade">
-        <nav
-          class="main-nav"
-          role="navigation"
-          aria-label="Main Navigation"
-          v-if="isShown || isDesktop"
-        >
+        <nav class="main-nav" aria-label="Main Navigation" v-if="isShown || isDesktop">
           <ul class="main-nav-list l-flex">
             <li class="main-nav-item text-center">
               <a href="#features" aria-label="Features" class="main-nav-link">Features</a>

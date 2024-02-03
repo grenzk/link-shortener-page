@@ -10,7 +10,7 @@ import { IconFacebook, IconTwitter, IconPinterest, IconInstagram } from '@/compo
 
       <div class="footer-content">
         <h3 class="footer-title">Features</h3>
-        <nav class="footer-nav">
+        <nav class="footer-nav" aria-label="Footer Navigation 1">
           <ul class="footer-nav-list l-flex">
             <li class="footer-nav-item">
               <a href="/link-shortening" aria-label="Link Shortening" class="footer-nav-link"
@@ -31,7 +31,7 @@ import { IconFacebook, IconTwitter, IconPinterest, IconInstagram } from '@/compo
 
       <div class="footer-content">
         <h3 class="footer-title">Resources</h3>
-        <nav class="footer-nav">
+        <nav class="footer-nav" aria-label="Footer Navigation 2">
           <ul class="footer-nav-list l-flex">
             <li class="footer-nav-item">
               <a href="/blog" aria-label="Blog" class="footer-nav-link">Blog</a>
@@ -48,7 +48,7 @@ import { IconFacebook, IconTwitter, IconPinterest, IconInstagram } from '@/compo
 
       <div class="footer-content">
         <h3 class="footer-title">Company</h3>
-        <nav class="footer-nav">
+        <nav class="footer-nav" aria-label="Footer Navigation 3">
           <ul class="footer-nav-list l-flex">
             <li class="footer-nav-item">
               <a href="/about" aria-label="About" class="footer-nav-link">About</a>
