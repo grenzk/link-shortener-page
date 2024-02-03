@@ -98,6 +98,7 @@ onBeforeMount(() => {
             v-model="website"
             aria-describedby="website-help"
             placeholder="Shorten a link here..."
+            aria-label="Shorten a link here..."
           />
           <small id="website-help" class="p-error">{{ errors.website }}</small>
         </div>
