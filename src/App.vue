@@ -1,6 +1,11 @@
 <script setup>
-import InputText from 'primevue/inputtext'
+import { onBeforeMount, ref } from 'vue'
+import { useForm } from 'vee-validate'
+import Axios from 'axios'
+import * as Yup from 'yup'
+import { API_ACCESS_TOKEN, API_ENDPOINT } from '@/config'
 
+import InputText from 'primevue/inputtext'
 import {
   SiteHeader,
   HeroSection,
@@ -11,6 +16,70 @@ import {
 } from '@/components'
 
 import { ShortenMobile, ShortenDesktop } from '@/components/images'
+
+const shortenLinks = ref([])
+
+const schema = Yup.object({
+  website: Yup.string().url().required('Please add a link')
+})
+
+const { defineField, handleSubmit, resetForm, errors } = useForm({
+  validationSchema: schema
+})
+
+const [website] = defineField('website')
+
+const fetchShortenLink = async (input) => {
+  try {
+    const response = await Axios.post(
+      API_ENDPOINT,
+      {
+        long_url: input
+      },
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${API_ACCESS_TOKEN}`
+        }
+      }
+    )
+    const shortLink = response.data
+
+    shortenLinks.value.push({
+      id: shortLink.id,
+      longUrl: shortLink.long_url,
+      shortUrl: shortLink.link,
+      isPressed: false
+    })
+    localStorage.setItem('cachedResponse', JSON.stringify(shortenLinks.value))
+  } catch (error) {
+    console.error(error)
+  }
+}
+
+const onSubmit = handleSubmit((values) => {
+  fetchShortenLink(values.website)
+  resetForm()
+})
+
+const copyLink = (shortUrl) => {
+  navigator.clipboard.writeText(shortUrl)
+
+  shortenLinks.value = shortenLinks.value.map((link) => {
+    if (link.shortUrl === shortUrl) {
+      return { ...link, isPressed: true }
+    }
+    return link
+  })
+}
+
+onBeforeMount(() => {
+  const cachedResponse = localStorage.getItem('cachedResponse')
+
+  if (cachedResponse) {
+    shortenLinks.value = JSON.parse(cachedResponse)
+  }
+})
 </script>
 
 <template>
@@ -18,21 +87,32 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
   <main>
     <HeroSection />
     <section class="advanced-statistics">
-      <form class="form l-container l-flex overflow-hidden">
+      <form class="form l-container l-flex overflow-hidden" @submit="onSubmit">
         <ShortenMobile class="form-bg-img-mobile" />
         <ShortenDesktop class="form-bg-img-desktop" />
 
-        <InputText
-          type="text"
-          class="form-input-text"
-          v-model="value"
-          placeholder="Shorten a link here..."
-        />
+        <div class="form-top-panel">
+          <InputText
+            class="form-input-text"
+            :class="{ 'p-invalid': errors.website }"
+            v-model="website"
+            aria-described="website-help"
+            placeholder="Shorten a link here..."
+          />
+          <small id="website-help" class="p-error">{{ errors.website }}</small>
+        </div>
         <input class="button-submit" type="submit" value="Shorten It!" />
       </form>
 
-      <div class="link-group l-container l-flex">
-        <LinkCard />
+      <div v-if="shortenLinks.length" class="link-group l-container l-flex">
+        <LinkCard
+          v-for="link in shortenLinks"
+          :key="link.id"
+          :long-url="link.longUrl"
+          :short-url="link.shortUrl"
+          :is-copied="link.isPressed"
+          @copy="copyLink"
+        />
       </div>
 
       <div class="advanced-statistics-group l-container">
@@ -139,12 +219,30 @@ import { ShortenMobile, ShortenDesktop } from '@/components/images'
     }
   }
 
+  &-top-panel {
+    width: 100%;
+  }
+
   &-input-text {
     width: 100%;
     height: 3rem;
     font-size: var(--font-size-m);
     border-radius: var(--border-radius-form-input);
     padding-left: 1rem;
+  }
+
+  &-input-text.p-invalid {
+    border: 3px solid var(--color-secondary-red);
+
+    &::placeholder {
+      color: var(--color-secondary-red);
+    }
+  }
+
+  .p-error {
+    color: var(--color-secondary-red);
+    font-size: var(--font-size-xs);
+    font-style: italic;
   }
 }
 

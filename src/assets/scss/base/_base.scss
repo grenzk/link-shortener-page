@@ -36,6 +36,16 @@ body {
   line-height: 1.5;
 }
 
+#app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  flex: 1;
+}
+
 img,
 picture {
   max-width: 100%;

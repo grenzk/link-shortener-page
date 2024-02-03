@@ -1,13 +1,25 @@
-<script setup></script>
+<script setup>
+defineProps({
+  longUrl: String,
+  shortUrl: String,
+  isCopied: Boolean
+})
+</script>
 
 <template>
   <div class="link l-flex">
-    <a href="#" class="link-old">https://www.frontendmentor.io</a>
+    <a :href="longUrl" class="link-old">{{ longUrl }}</a>
     <div class="link-divider"></div>
 
     <div class="link-bottom-panel l-flex">
-      <a href="#" class="link-new">https://rel.ink/k4lKyk</a>
-      <button class="button-copy">Copy</button>
+      <a :href="shortUrl" class="link-new">{{ shortUrl }}</a>
+      <button
+        class="button-copy"
+        :class="{ 'is-pressed': isCopied }"
+        @click="$emit('copy', shortUrl)"
+      >
+        {{ isCopied ? 'Copied!' : 'Copy' }}
+      </button>
     </div>
   </div>
 </template>
@@ -36,6 +48,10 @@
 
   &-old {
     color: var(--color-neutral-very-dark-blue);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 485px;
   }
 
   &-new {
