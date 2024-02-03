@@ -51,7 +51,7 @@ defineProps({
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 485px;
+    max-width: 34rem;
   }
 
   &-new {
