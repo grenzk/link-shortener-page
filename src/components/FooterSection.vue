@@ -138,6 +138,10 @@ import { IconFacebook, IconTwitter, IconPinterest, IconInstagram } from '@/compo
 
     &-icon {
       width: var(--footer-icon-svg-width);
+
+      path:hover {
+        fill: var(--color-primary-cyan);
+      }
     }
   }
 
