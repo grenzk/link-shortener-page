@@ -47,7 +47,9 @@ onMounted(() => {
               <a href="/login" aria-label="Login" class="main-nav-link">Login</a>
             </li>
             <li class="main-nav-item text-center">
-              <a href="/sign-up" aria-label="Sign Up" class="button-link display-block">Sign Up</a>
+              <a href="/sign-up" aria-label="Sign Up" class="button-link button-nav display-block"
+                >Sign Up</a
+              >
             </li>
           </ul>
         </nav>
