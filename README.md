@@ -1,5 +1,7 @@
 # URL Shortening API Landing Page
 
+A captivating landing page seamlessly integrated with the Bitly link shortening API.
+
 ## Table of contents
 
 - [Overview](#overview)
