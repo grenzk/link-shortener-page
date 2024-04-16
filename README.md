@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - [Solution](https://github.com/grenzk/url-shortening-api-landing-page)
-- [Live Site](https://url-shortening-api-landing-page-eight.vercel.app/)
+- [Live Site](https://shortly-lilac-xi.vercel.app/)
 
 ## My process
 
