@@ -69,7 +69,20 @@ const fetchShortenLink = async (input) => {
 }
 
 const onSubmit = handleSubmit((values) => {
-  fetchShortenLink(values.website)
+  const inputLink = values.website.endsWith('/') ? values.website : values.website + '/'
+  const linkExists = shortenLinks.value.some((link) => Object.values(link).includes(inputLink))
+
+  if (linkExists) {
+    toast.add({
+      severity: 'error',
+      summary: 'LINK ERROR',
+      detail: 'Link already exists. Please try again.',
+      life: 3000
+    })
+  } else {
+    fetchShortenLink(values.website)
+  }
+
   resetForm()
 })
 
@@ -83,6 +96,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
+  {{ shortenLinks }}
   <Toast position="bottom-center" />
   <SiteHeader />
   <main>
