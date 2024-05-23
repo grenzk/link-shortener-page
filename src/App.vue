@@ -3,6 +3,8 @@ import { onBeforeMount, ref } from 'vue'
 import { useForm } from 'vee-validate'
 import Axios from 'axios'
 import * as Yup from 'yup'
+import { useToast } from 'primevue/usetoast'
+import Toast from 'primevue/toast'
 import { API_ACCESS_TOKEN, API_ENDPOINT } from '@/config'
 
 import InputText from 'primevue/inputtext'
@@ -18,6 +20,16 @@ import {
 import { ShortenMobile, ShortenDesktop } from '@/components/images'
 
 const shortenLinks = ref([])
+const toast = useToast()
+
+const showError = (error) => {
+  toast.add({
+    severity: 'error',
+    summary: error.response.data.message,
+    detail: error.message,
+    life: 3000
+  })
+}
 
 const schema = Yup.object({
   website: Yup.string().url().required('Please add a link')
@@ -53,7 +65,7 @@ const fetchShortenLink = async (input) => {
     })
     localStorage.setItem('cachedResponse', JSON.stringify(shortenLinks.value))
   } catch (error) {
-    console.error(error)
+    showError(error)
   }
 }
 
@@ -83,6 +95,7 @@ onBeforeMount(() => {
 </script>
 
 <template>
+  <Toast position="bottom-center" />
   <SiteHeader />
   <main>
     <HeroSection />
@@ -157,6 +170,12 @@ onBeforeMount(() => {
 </template>
 
 <style lang="scss">
+.p-toast {
+  width: auto;
+  max-width: 25rem;
+  min-width: 20rem;
+}
+
 .advanced-statistics {
   position: relative;
   padding: 5rem 0 5rem;
