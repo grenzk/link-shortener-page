@@ -157,6 +157,7 @@ onBeforeMount(() => {
 
 <style lang="scss">
 .p-toast {
+  font-family: var(--font-family-sans);
   width: auto;
   max-width: 25rem;
   min-width: 20rem;
@@ -232,6 +233,7 @@ onBeforeMount(() => {
   &-input-text {
     width: 100%;
     height: 3rem;
+    font-family: var(--font-family-sans);
     font-size: var(--font-size-m);
     border-radius: var(--border-radius-form-input);
     padding-left: 1rem;
