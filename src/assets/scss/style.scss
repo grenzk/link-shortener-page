@@ -1,6 +1,12 @@
+@use 'sass:meta';
 @use 'config/variables';
-@use 'base/base';
 @use 'layout/layout';
 @use 'components/utilities';
 @use 'components/buttons';
 @use 'components/breakpoints';
+
+@layer base, primevue;
+
+@layer base {
+  @include meta.load-css('base/base');
+}
