@@ -96,7 +96,6 @@ onBeforeMount(() => {
 </script>
 
 <template>
-  {{ shortenLinks }}
   <Toast position="bottom-center" />
   <SiteHeader />
   <main>
