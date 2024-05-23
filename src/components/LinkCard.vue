@@ -1,9 +1,17 @@
 <script setup>
-defineProps({
+import { ref } from 'vue'
+
+const props = defineProps({
   longUrl: String,
-  shortUrl: String,
-  isCopied: Boolean
+  shortUrl: String
 })
+
+const isCopied = ref(false)
+
+const copyLink = () => {
+  navigator.clipboard.writeText(props.shortUrl)
+  isCopied.value = true
+}
 </script>
 
 <template>
@@ -13,11 +21,7 @@ defineProps({
 
     <div class="link-bottom-panel l-flex">
       <a :href="shortUrl" class="link-new">{{ shortUrl }}</a>
-      <button
-        class="button-copy"
-        :class="{ 'is-pressed': isCopied }"
-        @click="$emit('copy', shortUrl)"
-      >
+      <button class="button-copy" :class="{ 'is-pressed': isCopied }" @click="copyLink">
         {{ isCopied ? 'Copied!' : 'Copy' }}
       </button>
     </div>
